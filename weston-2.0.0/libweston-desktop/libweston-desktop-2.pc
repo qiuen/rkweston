@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libweston-desktop
+Description: Desktop shells abstraction library for libweston compositors
+Version: 2.0.0
+Requires.private: libweston-2 wayland-server
+Cflags: -I${includedir}/libweston-2
+Libs: -L${libdir} -lweston-desktop-2

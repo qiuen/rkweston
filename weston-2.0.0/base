@@ -1,0 +1,1881 @@
+./fullscreen-shell/fullscreen-shell.c:329:	wl_signal_add(&output->destroy_signal, &fsout->output_destroyed);
+./fullscreen-shell/fullscreen-shell.c:334:						 output->x, output->y,
+./fullscreen-shell/fullscreen-shell.c:335:						 output->width, output->height);
+./fullscreen-shell/fullscreen-shell.c:361:	listener = wl_signal_get(&output->destroy_signal, output_destroyed);
+./fullscreen-shell/fullscreen-shell.c:369:	if (output && output->original_mode)
+./fullscreen-shell/fullscreen-shell.c:418:	x = output->x + (output->width - surf_width) / 2 - surf_x / 2;
+./fullscreen-shell/fullscreen-shell.c:419:	y = output->y + (output->height - surf_height) / 2 - surf_y / 2;
+./fullscreen-shell/fullscreen-shell.c:436:	if (output->width == surf_width && output->height == surf_height) {
+./fullscreen-shell/fullscreen-shell.c:438:					 fsout->output->x - surf_x,
+./fullscreen-shell/fullscreen-shell.c:439:					 fsout->output->y - surf_y);
+./fullscreen-shell/fullscreen-shell.c:450:		x = output->x + (output->width - width) / 2 - surf_x;
+./fullscreen-shell/fullscreen-shell.c:451:		y = output->y + (output->height - height) / 2 - surf_y;
+./fullscreen-shell/fullscreen-shell.c:482:	output_aspect = (float) output->width / (float) output->height;
+./fullscreen-shell/fullscreen-shell.c:494:					     output->width,
+./fullscreen-shell/fullscreen-shell.c:495:					     output->width / surface_aspect);
+./fullscreen-shell/fullscreen-shell.c:498:					     output->height * surface_aspect,
+./fullscreen-shell/fullscreen-shell.c:499:					     output->height);
+./fullscreen-shell/fullscreen-shell.c:505:					     output->height * surface_aspect,
+./fullscreen-shell/fullscreen-shell.c:506:					     output->height);
+./fullscreen-shell/fullscreen-shell.c:509:					     output->width,
+./fullscreen-shell/fullscreen-shell.c:510:					     output->width / surface_aspect);
+./fullscreen-shell/fullscreen-shell.c:514:		fs_output_scale_view(fsout, output->width, output->height);
+./fullscreen-shell/fullscreen-shell.c:521:				 fsout->output->x - surf_x,
+./fullscreen-shell/fullscreen-shell.c:522:				 fsout->output->y - surf_y);
+./fullscreen-shell/fullscreen-shell.c:524:				fsout->output->width,
+./fullscreen-shell/fullscreen-shell.c:525:				fsout->output->height);
+./fullscreen-shell/fullscreen-shell.c:552:	switch (fsout->output->transform) {
+./fullscreen-shell/fullscreen-shell.c:557:		mode.width = surf_height * fsout->output->native_scale;
+./fullscreen-shell/fullscreen-shell.c:558:		mode.height = surf_width * fsout->output->native_scale;
+./fullscreen-shell/fullscreen-shell.c:566:		mode.width = surf_width * fsout->output->native_scale;
+./fullscreen-shell/fullscreen-shell.c:567:		mode.height = surf_height * fsout->output->native_scale;
+./fullscreen-shell/fullscreen-shell.c:573:					fsout->output->native_scale);
+./fullscreen-shell/fullscreen-shell.c:599:				 fsout->output->x - surf_x,
+./fullscreen-shell/fullscreen-shell.c:600:				 fsout->output->y - surf_y);
+Binary file ./text.weston matches
+Binary file ./presentation.weston matches
+Binary file ./zuctest matches
+Binary file ./bad_buffer.weston matches
+Binary file ./devices.weston matches
+./Makefile:1637:	libweston/compositor-x11.h libweston/windowed-output-api.h \
+./Makefile:2321:	libweston/windowed-output-api.h libweston/plugin-registry.h \
+Binary file ./roles.weston matches
+Binary file ./ivi-shell-app.weston matches
+Binary file ./button.weston matches
+Binary file ./subsurface-shot.weston matches
+Binary file ./ivi-layout.ivi matches
+./tools/zunitc/src/zunitc_impl.c:547:		{ WESTON_OPTION_BOOLEAN, "zuc-output-xml", 0, &opt_junit },
+./tools/zunitc/src/zunitc_impl.c:638:		       "  --zuc-output-xml\n"
+Binary file ./tools/zunitc/src/.libs/libzunitc_la-zunitc_impl.o matches
+./tests/weston-test-client-helper.c:620:	output->x = x;
+./tests/weston-test-client-helper.c:621:	output->y = y;
+./tests/weston-test-client-helper.c:635:		output->width = width;
+./tests/weston-test-client-helper.c:636:		output->height = height;
+./tests/weston-test-client-helper.c:647:	output->scale = scale;
+./tests/weston-test-client-helper.c:656:	output->initialized = 1;
+./tests/weston-test-client-helper.c:701:		output->wl_output =
+./tests/weston-test-client-helper.c:704:		wl_output_add_listener(output->wl_output,
+./tests/weston-test-client-helper.c:859:	assert(client->output->initialized == 1);
+./tests/weston-test-client-helper.c:1355:					    client->output->width,
+./tests/weston-test-client-helper.c:1356:					    client->output->height);
+./tests/weston-test-client-helper.c:1360:				       client->output->wl_output,
+./tests/weston-test.c:342:	struct weston_compositor *compositor = output->compositor;
+./tests/weston-test.c:346:	output->disable_planes--;
+./tests/weston-test.c:363:					  output->current_mode->width,
+./tests/weston-test.c:364:					  output->current_mode->height);
+./tests/weston-test.c:380:			copy_bgra_yflip(d, s, output->current_mode->height, stride);
+./tests/weston-test.c:382:			copy_bgra(d, pixels, output->current_mode->height, stride);
+./tests/weston-test.c:387:			copy_rgba_yflip(d, s, output->current_mode->height, stride);
+./tests/weston-test.c:389:			copy_rgba(d, pixels, output->current_mode->height, stride);
+./tests/weston-test.c:421:	if (buffer->width < output->current_mode->width ||
+./tests/weston-test.c:422:		buffer->height < output->current_mode->height) {
+./tests/weston-test.c:439:	wl_signal_add(&output->frame_signal, &l->listener);
+./tests/weston-test.c:442:	output->disable_planes++;
+./tests/event-test.c:293:	return !(output->x >= surface->x + surface->width
+./tests/event-test.c:294:		|| output->x + output->width <= surface->x
+./tests/event-test.c:295:		|| output->y >= surface->y + surface->height
+./tests/event-test.c:296:		|| output->y + output->height <= surface->y);
+./tests/event-test.c:338:	x = client->output->width;
+./tests/event-test.c:348:	y = client->output->height;
+Binary file ./tests/.libs/libtest_client_la-weston-test-client-helper.o matches
+./.br_filelist_after:899:1c6df9a63c172b847f88095a25ab0135  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-0.conf
+./.br_filelist_after:1518:2f2f7de80eb35c9266d886510b38411e  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
+./.br_filelist_after:1544:2fcfd28889f6f8b387c530bdfcae31e1  ./usr/include/libweston-2/windowed-output-api.h
+./.br_filelist_after:1906:3b89385ae89c018aee60bcfdeca53858  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
+./.br_filelist_after:2982:5ecdb0be055984d31b3fcfbe4cfa2b47  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-4.conf
+./.br_filelist_after:3232:658164f871504e9258732711bd871ea0  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-mono.conf
+./.br_filelist_after:3427:6b5dfa8eb2b8d0f1e3130a377291dbd0  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
+./.br_filelist_after:4013:7e238b6fd3acbf194737a0860fea46e3  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf
+./.br_filelist_after:4702:933174c31e545a4c27eeb1533523f543  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-2.conf
+./.br_filelist_after:4757:94ad2d7f68a539e56b5a67e0e27f9037  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-1.conf
+./.br_filelist_after:5470:aafb9dedc0fcba08f1ec6a524a19e8e7  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-3.conf
+./.br_filelist_after:6500:cbf323f5cb80d504a5eee5c4da645500  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
+./.br_filelist_after:6916:d9949cf5133a05064d63524a885aecda  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-5.conf
+./.br_filelist_after:7204:e3f9cf7a28a75fcd774a6c4584ef7a01  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker-always.conf
+./.br_filelist_after:7481:ed7ff23099053639e176d7ed858ca748  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-headphones-2.conf
+Binary file ./subsurface.weston matches
+./Makefile.in:1637:	libweston/compositor-x11.h libweston/windowed-output-api.h \
+./Makefile.in:2321:	libweston/windowed-output-api.h libweston/plugin-registry.h \
+./xwayland/window-manager.c:264:	wl_signal_add(&output->destroy_signal, &ref->destroy_listener);
+./xwayland/window-manager.c:2594:		if (output->x == window->x &&
+./xwayland/window-manager.c:2595:		    output->y == window->y &&
+./xwayland/window-manager.c:2596:		    output->width == window->width &&
+./xwayland/window-manager.c:2597:		    output->height == window->height &&
+./xwayland/window-manager.c:2605:		    window->size_hints.width == output->width &&
+./xwayland/window-manager.c:2606:		    window->size_hints.height == output->height)
+./xwayland/window-manager.c:2609:		    window->size_hints.min_width == output->width &&
+./xwayland/window-manager.c:2610:		    window->size_hints.min_height == output->height &&
+./xwayland/window-manager.c:2611:		    window->size_hints.max_width == output->width &&
+./xwayland/window-manager.c:2612:		    window->size_hints.max_height == output->height)
+./xwayland/window-manager.c:2617:		    window->size_hints.x == output->x &&
+./xwayland/window-manager.c:2618:		    window->size_hints.y == output->y) {
+./compositor/screen-share.c:353:	weston_seat_init(&seat->base, so->output->compositor, "default");
+./compositor/screen-share.c:402:		wl_list_insert(&sb->output->shm.free_buffers, &sb->free_link);
+./compositor/screen-share.c:421:	width = so->output->width;
+./compositor/screen-share.c:422:	height = so->output->height;
+./compositor/screen-share.c:514:	fw = pixman_int_to_fixed(output->width);
+./compositor/screen-share.c:515:	fh = pixman_int_to_fixed(output->height);
+./compositor/screen-share.c:517:	switch (output->transform) {
+./compositor/screen-share.c:528:	switch (output->transform) {
+./compositor/screen-share.c:551:			       pixman_fixed_1 * output->current_scale,
+./compositor/screen-share.c:552:			       pixman_fixed_1 * output->current_scale);
+./compositor/screen-share.c:576:		 * so->output->current_scale * so->output->current_scale;
+./compositor/screen-share.c:638:	if (so->output->current_scale == 1) {
+./compositor/screen-share.c:653:				 so->output->width, /* width */
+./compositor/screen-share.c:654:				 so->output->height /* height */);
+./compositor/screen-share.c:805:	pixman_region32_intersect(&damage, &so->output->region,
+./compositor/screen-share.c:806:				  &so->output->previous_damage);
+./compositor/screen-share.c:807:	pixman_region32_translate(&damage, -so->output->x, -so->output->y);
+./compositor/screen-share.c:814:	weston_transformed_region(so->output->width, so->output->height,
+./compositor/screen-share.c:815:				  so->output->transform,
+./compositor/screen-share.c:816:				  so->output->current_scale,
+./compositor/screen-share.c:819:	width = so->output->current_mode->width;
+./compositor/screen-share.c:820:	height = so->output->current_mode->height;
+./compositor/screen-share.c:847:	do_yflip = !!(so->output->compositor->capabilities & WESTON_CAP_CAPTURE_YFLIP);
+./compositor/screen-share.c:858:			so->output->compositor->renderer->read_pixels(
+./compositor/screen-share.c:860:				x, so->output->current_mode->height - r[i].y2,
+./compositor/screen-share.c:866:			so->output->compositor->renderer->read_pixels(
+./compositor/screen-share.c:939:								 output->current_mode->refresh);
+./compositor/screen-share.c:948:	loop = wl_display_get_event_loop(output->compositor->wl_display);
+./compositor/screen-share.c:965:	wl_signal_add(&so->output->destroy_signal, &so->output_destroyed);
+./compositor/screen-share.c:968:	wl_signal_add(&output->frame_signal, &so->frame_listener);
+./compositor/screen-share.c:969:	output->disable_planes++;
+./compositor/screen-share.c:990:	so->output->disable_planes--;
+./compositor/screen-share.c:1075:		if (x >= output->x && y >= output->y &&
+./compositor/screen-share.c:1076:		    x < output->x + output->width &&
+./compositor/screen-share.c:1077:		    y < output->y + output->height)
+Binary file ./compositor/weston-main.o matches
+./compositor/main.c:66:#include "windowed-output-api.h"
+./compositor/main.c:615:		"  --output-count=COUNT\tCreate multiple outputs\n"
+./compositor/main.c:628:		"  --output-count=COUNT\tCreate multiple outputs\n"
+./compositor/main.c:1060:				   t, output->name);
+./compositor/main.c:1077:		weston_windowed_output_get_api(output->compositor);
+./compositor/main.c:1079:	struct weston_config *wc = wet_get_config(output->compositor);
+./compositor/main.c:1081:	struct wet_compositor *compositor = to_wet_compositor(output->compositor);
+./compositor/main.c:1093:	section = weston_config_get_section(wc, "output", "name", output->name);
+./compositor/main.c:1102:				   output->name);
+./compositor/main.c:1120:			   output->name);
+./compositor/main.c:1157:	struct weston_config *wc = wet_get_config(output->compositor);
+./compositor/main.c:1158:	struct wet_compositor *wet = to_wet_compositor(output->compositor);
+./compositor/main.c:1160:	const struct weston_drm_output_api *api = weston_drm_output_get_api(output->compositor);
+./compositor/main.c:1174:	section = weston_config_get_section(wc, "output", "name", output->name);
+./compositor/main.c:1266:		weston_log("Cannot configure output \"%s\".\n", output->name);
+./compositor/main.c:1332:	struct wet_compositor *compositor = to_wet_compositor(output->compositor);
+./compositor/main.c:1334:	const struct weston_rdp_output_api *api = weston_rdp_output_get_api(output->compositor);
+./compositor/main.c:1356:			   output->name);
+./compositor/main.c:1426:	struct weston_config *wc = wet_get_config(output->compositor);
+./compositor/main.c:1484:		weston_log("Cannot configure output \"%s\".\n", output->name);
+./compositor/main.c:1510:	       { WESTON_OPTION_INTEGER, "output-count", 0, &option_count },
+./compositor/main.c:1600:		weston_log("Cannot configure output \"%s\".\n", output->name);
+./compositor/main.c:1633:		{ WESTON_OPTION_INTEGER, "output-count", 0, &count },
+Binary file ./event.weston matches
+Binary file ./config-parser.test matches
+./ivi-shell/ivi-layout.c:428:	rect_output->x = max(rect1->x, rect2->x);
+./ivi-shell/ivi-layout.c:429:	rect_output->y = max(rect1->y, rect2->y);
+./ivi-shell/ivi-layout.c:430:	rect_output->width = rect1_right < rect2_right ?
+./ivi-shell/ivi-layout.c:431:			     rect1_right - rect_output->x :
+./ivi-shell/ivi-layout.c:432:			     rect2_right - rect_output->x;
+./ivi-shell/ivi-layout.c:433:	rect_output->height = rect1_bottom < rect2_bottom ?
+./ivi-shell/ivi-layout.c:434:			      rect1_bottom - rect_output->y :
+./ivi-shell/ivi-layout.c:435:			      rect2_bottom - rect_output->y;
+./ivi-shell/ivi-layout.c:437:	if (rect_output->width < 0 || rect_output->height < 0) {
+./ivi-shell/ivi-layout.c:438:		rect_output->width = 0;
+./ivi-shell/ivi-layout.c:439:		rect_output->height = 0;
+./ivi-shell/ivi-layout.c:470:		rect_output->x = boundingbox->x;
+./ivi-shell/ivi-layout.c:471:		rect_output->y = boundingbox->y;
+./ivi-shell/ivi-layout.c:472:		rect_output->width = boundingbox->width;
+./ivi-shell/ivi-layout.c:473:		rect_output->height = boundingbox->height;
+./ivi-shell/ivi-layout.c:491:		rect_output->x = top_left.f[0];
+./ivi-shell/ivi-layout.c:492:		rect_output->width = bottom_right.f[0] - rect_output->x;
+./ivi-shell/ivi-layout.c:494:		rect_output->x = bottom_right.f[0];
+./ivi-shell/ivi-layout.c:495:		rect_output->width = top_left.f[0] - rect_output->x;
+./ivi-shell/ivi-layout.c:499:		rect_output->y = top_left.f[1];
+./ivi-shell/ivi-layout.c:500:		rect_output->height = bottom_right.f[1] - rect_output->y;
+./ivi-shell/ivi-layout.c:502:		rect_output->y = bottom_right.f[1];
+./ivi-shell/ivi-layout.c:503:		rect_output->height = top_left.f[1] - rect_output->y;
+./ivi-shell/ivi-layout.c:563:	struct ivi_rectangle screen_dest_rect =    { output->x,
+./ivi-shell/ivi-layout.c:564:						     output->y,
+./ivi-shell/ivi-layout.c:565:						     output->width,
+./ivi-shell/ivi-layout.c:566:						     output->height };
+./ivi-shell/ivi-layout.c:568:						   { lp->dest_x + output->x,
+./ivi-shell/ivi-layout.c:569:						     lp->dest_y + output->y,
+./ivi-shell/ivi-layout.c:592:	weston_matrix_translate(m, output->x, output->y, 0.0f);
+./ivi-shell/input-panel-ivi.c:81:		x = ipsurf->output->x + (ipsurf->output->width - ipsurf->surface->width) / 2;
+./ivi-shell/input-panel-ivi.c:82:		y = ipsurf->output->y + ipsurf->output->height - ipsurf->surface->height;
+./ivi-shell/input-panel-ivi.c:187:		x = ip_surface->output->x + (ip_surface->output->width - surface->width) / 2;
+./ivi-shell/input-panel-ivi.c:188:		y = ip_surface->output->y + ip_surface->output->height - surface->height;
+./ivi-shell/hmi-controller.c:791:		base_layer->width = output->current_mode->width;
+./ivi-shell/hmi-controller.c:792:		base_layer->height = output->current_mode->height;
+./ivi-shell/hmi-controller.c:811:		application_layer->width = output->current_mode->width;
+./ivi-shell/hmi-controller.c:812:		application_layer->height = output->current_mode->height - panel_height;
+./ivi-shell/hmi-controller.c:828:		output->current_mode->width;
+./ivi-shell/hmi-controller.c:830:		output->current_mode->height - panel_height;
+Binary file ./keyboard.weston matches
+Binary file ./weston matches
+./desktop-shell/shell.c:340:	area->x = output->x;
+./desktop-shell/shell.c:341:	area->y = output->y;
+./desktop-shell/shell.c:349:		area->width = output->width;
+./desktop-shell/shell.c:350:		area->height = output->height - panel_height;
+./desktop-shell/shell.c:355:		area->width = output->width - panel_width;
+./desktop-shell/shell.c:356:		area->height = output->height;
+./desktop-shell/shell.c:517:			surface->output->name);
+./desktop-shell/shell.c:580:	weston_surface_set_size(surface, output->width, output->height);
+./desktop-shell/shell.c:581:	weston_view_set_position(fsurf->view, output->x, output->y);
+./desktop-shell/shell.c:584:	pixman_region32_init_rect(&surface->opaque, output->x, output->y,
+./desktop-shell/shell.c:585:				  output->width, output->height);
+./desktop-shell/shell.c:954:	return abs(output->region.extents.y1 - output->region.extents.y2);
+./desktop-shell/shell.c:1156:	wl_list_insert(&output->animation_list,
+./desktop-shell/shell.c:2094:			                     output->x, output->y,
+./desktop-shell/shell.c:2095:			                     output->width,
+./desktop-shell/shell.c:2096:			                     output->height);
+./desktop-shell/shell.c:2583:		width = shsurf->output->width;
+./desktop-shell/shell.c:2584:		height = shsurf->output->height;
+./desktop-shell/shell.c:2863:	weston_view_set_position(ev, ev->output->x + x, ev->output->y + y);
+./desktop-shell/shell.c:2881:		if (shell_output->output == output)
+./desktop-shell/shell.c:2892:			surface->output->name);
+./desktop-shell/shell.c:2913:	output->background_surface = NULL;
+./desktop-shell/shell.c:2946:					    surface->output->width,
+./desktop-shell/shell.c:2947:					    surface->output->height);
+./desktop-shell/shell.c:2950:	sh_output->background_surface = surface;
+./desktop-shell/shell.c:2952:	sh_output->background_surface_listener.notify = handle_background_surface_destroy;
+./desktop-shell/shell.c:2953:	wl_signal_add(&surface->destroy_signal, &sh_output->background_surface_listener);
+./desktop-shell/shell.c:2960:			surface->output->name);
+./desktop-shell/shell.c:2978:		y = view->output->height - height;
+./desktop-shell/shell.c:2983:		x = view->output->width - width;
+./desktop-shell/shell.c:2997:	output->panel_surface = NULL;
+./desktop-shell/shell.c:3031:					    surface->output->width,
+./desktop-shell/shell.c:3032:					    surface->output->height);
+./desktop-shell/shell.c:3035:	sh_output->panel_surface = surface;
+./desktop-shell/shell.c:3037:	sh_output->panel_surface_listener.notify = handle_panel_surface_destroy;
+./desktop-shell/shell.c:3038:	wl_signal_add(&surface->destroy_signal, &sh_output->panel_surface_listener);
+./desktop-shell/shell.c:3375:		if (pixman_region32_contains_point(&output->region,
+./desktop-shell/shell.c:3380:				increment = output->zoom.increment;
+./desktop-shell/shell.c:3382:				increment = -output->zoom.increment;
+./desktop-shell/shell.c:3385:				increment = output->zoom.increment *
+./desktop-shell/shell.c:3390:			output->zoom.level += increment;
+./desktop-shell/shell.c:3392:			if (output->zoom.level < 0.0)
+./desktop-shell/shell.c:3393:				output->zoom.level = 0.0;
+./desktop-shell/shell.c:3394:			else if (output->zoom.level > output->zoom.max_level)
+./desktop-shell/shell.c:3395:				output->zoom.level = output->zoom.max_level;
+./desktop-shell/shell.c:3397:			if (!output->zoom.active) {
+./desktop-shell/shell.c:3398:				if (output->zoom.level <= 0.0)
+./desktop-shell/shell.c:3403:			output->zoom.spring_z.target = output->zoom.level;
+./desktop-shell/shell.c:4073:	x = output->x + (output->width - width) / 2 - surf_x / 2;
+./desktop-shell/shell.c:4074:	y = output->y + (output->height - height) / 2 - surf_y / 2;
+./desktop-shell/shell.c:4107:		if (pixman_region32_contains_point(&output->region, ix, iy, NULL)) {
+./desktop-shell/shell.c:4454:	if (!output->set_backlight)
+./desktop-shell/shell.c:4458:		backlight_new = output->backlight_current - 25;
+./desktop-shell/shell.c:4460:		backlight_new = output->backlight_current + 25;
+./desktop-shell/shell.c:4467:	output->backlight_current = backlight_new;
+./desktop-shell/shell.c:4468:	output->set_backlight(output, output->backlight_current);
+./desktop-shell/shell.c:4593:		if (pixman_region32_contains_point(&output->region,
+./desktop-shell/shell.c:4604:		x = first_output->x + first_output->width / 4;
+./desktop-shell/shell.c:4605:		y = first_output->y + first_output->height / 4;
+./desktop-shell/shell.c:4681:					output->width,
+./desktop-shell/shell.c:4682:					output->height);
+./desktop-shell/shell.c:4694:	shell_resize_surface_to_output(shell, sh_output->background_surface, output);
+./desktop-shell/shell.c:4695:	shell_resize_surface_to_output(shell, sh_output->panel_surface, output);
+./desktop-shell/shell.c:4708:	shell_output->output = output;
+./desktop-shell/shell.c:4709:	shell_output->shell = shell;
+./desktop-shell/shell.c:4710:	shell_output->destroy_listener.notify = handle_output_destroy;
+./desktop-shell/shell.c:4711:	wl_list_init(&shell_output->panel_surface_listener.link);
+./desktop-shell/shell.c:4712:	wl_signal_add(&output->destroy_signal,
+./desktop-shell/shell.c:4713:		      &shell_output->destroy_listener);
+./desktop-shell/shell.c:4714:	wl_list_insert(shell->output_list.prev, &shell_output->link);
+./desktop-shell/shell.c:4739:		x = view->geometry.x + output->move_x;
+./desktop-shell/shell.c:4740:		y = view->geometry.y + output->move_y;
+./desktop-shell/shell.c:4799:		wl_list_remove(&shell_output->destroy_listener.link);
+./desktop-shell/shell.c:4800:		wl_list_remove(&shell_output->link);
+./desktop-shell/exposay.c:217:	struct weston_output *output = shell_output->output;
+./desktop-shell/exposay.c:218:	struct exposay_output *eoutput = &shell_output->eoutput;
+./desktop-shell/exposay.c:225:	eoutput->num_surfaces = 0;
+./desktop-shell/exposay.c:231:		eoutput->num_surfaces++;
+./desktop-shell/exposay.c:234:	if (eoutput->num_surfaces == 0) {
+./desktop-shell/exposay.c:235:		eoutput->grid_size = 0;
+./desktop-shell/exposay.c:236:		eoutput->hpadding_outer = 0;
+./desktop-shell/exposay.c:237:		eoutput->vpadding_outer = 0;
+./desktop-shell/exposay.c:238:		eoutput->padding_inner = 0;
+./desktop-shell/exposay.c:239:		eoutput->surface_size = 0;
+./desktop-shell/exposay.c:255:	eoutput->grid_size = floor(sqrtf(eoutput->num_surfaces));
+./desktop-shell/exposay.c:256:	if (pow(eoutput->grid_size, 2) != eoutput->num_surfaces)
+./desktop-shell/exposay.c:257:		eoutput->grid_size++;
+./desktop-shell/exposay.c:258:	last_row_removed = pow(eoutput->grid_size, 2) - eoutput->num_surfaces;
+./desktop-shell/exposay.c:260:	eoutput->hpadding_outer = (output->width / 10);
+./desktop-shell/exposay.c:261:	eoutput->vpadding_outer = (output->height / 10);
+./desktop-shell/exposay.c:262:	eoutput->padding_inner = 80;
+./desktop-shell/exposay.c:264:	w = output->width - (eoutput->hpadding_outer * 2);
+./desktop-shell/exposay.c:265:	w -= eoutput->padding_inner * (eoutput->grid_size - 1);
+./desktop-shell/exposay.c:266:	w /= eoutput->grid_size;
+./desktop-shell/exposay.c:268:	h = output->height - (eoutput->vpadding_outer * 2);
+./desktop-shell/exposay.c:269:	h -= eoutput->padding_inner * (eoutput->grid_size - 1);
+./desktop-shell/exposay.c:270:	h /= eoutput->grid_size;
+./desktop-shell/exposay.c:272:	eoutput->surface_size = (w < h) ? w : h;
+./desktop-shell/exposay.c:273:	if (eoutput->surface_size > (output->width / 2))
+./desktop-shell/exposay.c:274:		eoutput->surface_size = output->width / 2;
+./desktop-shell/exposay.c:275:	if (eoutput->surface_size > (output->height / 2))
+./desktop-shell/exposay.c:276:		eoutput->surface_size = output->height / 2;
+./desktop-shell/exposay.c:282:		pad = eoutput->surface_size + eoutput->padding_inner;
+./desktop-shell/exposay.c:301:		esurface->row = i / eoutput->grid_size;
+./desktop-shell/exposay.c:302:		esurface->column = i % eoutput->grid_size;
+./desktop-shell/exposay.c:304:		esurface->x = output->x + eoutput->hpadding_outer;
+./desktop-shell/exposay.c:306:		esurface->y = output->y + eoutput->vpadding_outer;
+./desktop-shell/exposay.c:309:		if (esurface->row == eoutput->grid_size - 1)
+./desktop-shell/exposay.c:310:			esurface->x += (eoutput->surface_size + eoutput->padding_inner) * last_row_removed / 2;
+./desktop-shell/exposay.c:313:			esurface->scale = eoutput->surface_size / (float) view->surface->width;
+./desktop-shell/exposay.c:315:			esurface->scale = eoutput->surface_size / (float) view->surface->height;
+./desktop-shell/exposay.c:470:		    shell->exposay.row_current < (shell->exposay.cur_output->grid_size - 1)) {
+./desktop-shell/exposay.c:472:					   (shell->exposay.cur_output->num_surfaces %
+./desktop-shell/exposay.c:473:					    shell->exposay.cur_output->grid_size) - 1);
+./desktop-shell/input-panel.c:80:		x = ipsurf->output->x + (ipsurf->output->width - ipsurf->surface->width) / 2;
+./desktop-shell/input-panel.c:81:		y = ipsurf->output->y + ipsurf->output->height - ipsurf->surface->height;
+./desktop-shell/input-panel.c:186:		x = ip_surface->output->x + (ip_surface->output->width - surface->width) / 2;
+./desktop-shell/input-panel.c:187:		y = ip_surface->output->y + ip_surface->output->height - surface->height;
+./Makefile.am:291:	libweston/windowed-output-api.h		\
+Binary file ./viewporter.weston matches
+Binary file ./internal-screenshot.weston matches
+./clients/presentation-shm.c:753:		if (output->name != name)
+./clients/window.c:1537:		if (window_output->output->scale > scale)
+./clients/window.c:1538:			scale = window_output->output->scale;
+./clients/window.c:5112:		if (output->output == wl_output) {
+./clients/window.c:5122:	window_output->output = output_found;
+./clients/window.c:5124:	wl_list_insert (&window->window_output_list, &window_output->link);
+./clients/window.c:5140:		if (window_output->output->output == output) {
+./clients/window.c:5150:			window->output_handler(window, window_output->output,
+./clients/window.c:5631:	output->allocation.x = x;
+./clients/window.c:5632:	output->allocation.y = y;
+./clients/window.c:5633:	output->transform = transform;
+./clients/window.c:5635:	if (output->make)
+./clients/window.c:5636:		free(output->make);
+./clients/window.c:5637:	output->make = strdup(make);
+./clients/window.c:5639:	if (output->model)
+./clients/window.c:5640:		free(output->model);
+./clients/window.c:5641:	output->model = strdup(model);
+./clients/window.c:5657:	output->scale = scale;
+./clients/window.c:5669:	struct display *display = output->display;
+./clients/window.c:5672:		output->allocation.width = width;
+./clients/window.c:5673:		output->allocation.height = height;
+./clients/window.c:5693:	output->display = d;
+./clients/window.c:5694:	output->scale = 1;
+./clients/window.c:5695:	output->output =
+./clients/window.c:5697:	output->server_output_id = id;
+./clients/window.c:5698:	wl_list_insert(d->output_list.prev, &output->link);
+./clients/window.c:5700:	wl_output_add_listener(output->output, &output_listener, output);
+./clients/window.c:5706:	if (output->destroy_handler)
+./clients/window.c:5707:		(*output->destroy_handler)(output, output->user_data);
+./clients/window.c:5709:	wl_output_destroy(output->output);
+./clients/window.c:5710:	wl_list_remove(&output->link);
+./clients/window.c:5720:		if (output->server_output_id == id) {
+./clients/window.c:5763:		if (output->allocation.width == 0 &&
+./clients/window.c:5764:		    output->allocation.height == 0)
+./clients/window.c:5775:	output->user_data = data;
+./clients/window.c:5781:	return output->user_data;
+./clients/window.c:5788:	output->destroy_handler = handler;
+./clients/window.c:5795:	struct rectangle allocation = output->allocation;
+./clients/window.c:5797:	switch (output->transform) {
+./clients/window.c:5803:	        allocation.width = output->allocation.height;
+./clients/window.c:5804:	        allocation.height = output->allocation.width;
+./clients/window.c:5814:	return output->output;
+./clients/window.c:5820:	return output->transform;
+./clients/window.c:5826:	return output->scale;
+./clients/window.c:5832:	return output->make;
+./clients/window.c:5838:	return output->model;
+./clients/weston-info.c:157:	switch (output->geometry.subpixel) {
+./clients/weston-info.c:178:			output->geometry.subpixel);
+./clients/weston-info.c:183:	switch (output->geometry.output_transform) {
+./clients/weston-info.c:210:			output->geometry.output_transform);
+./clients/weston-info.c:216:	       output->geometry.x, output->geometry.y);
+./clients/weston-info.c:217:	if (output->version >= 2)
+./clients/weston-info.c:218:		printf(" scale: %d,", output->geometry.scale);
+./clients/weston-info.c:222:	       output->geometry.physical_width,
+./clients/weston-info.c:223:	       output->geometry.physical_height);
+./clients/weston-info.c:225:	       output->geometry.make, output->geometry.model);
+./clients/weston-info.c:229:	wl_list_for_each(mode, &output->modes, link) {
+./clients/weston-info.c:504:	output->geometry.x = x;
+./clients/weston-info.c:505:	output->geometry.y = y;
+./clients/weston-info.c:506:	output->geometry.physical_width = physical_width;
+./clients/weston-info.c:507:	output->geometry.physical_height = physical_height;
+./clients/weston-info.c:508:	output->geometry.subpixel = subpixel;
+./clients/weston-info.c:509:	output->geometry.make = xstrdup(make);
+./clients/weston-info.c:510:	output->geometry.model = xstrdup(model);
+./clients/weston-info.c:511:	output->geometry.output_transform = output_transform;
+./clients/weston-info.c:527:	wl_list_insert(output->modes.prev, &mode->link);
+./clients/weston-info.c:544:	output->geometry.scale = scale;
+./clients/weston-info.c:560:	wl_output_destroy(output->output);
+./clients/weston-info.c:562:	if (output->geometry.make != NULL)
+./clients/weston-info.c:563:		free(output->geometry.make);
+./clients/weston-info.c:564:	if (output->geometry.model != NULL)
+./clients/weston-info.c:565:		free(output->geometry.model);
+./clients/weston-info.c:567:	wl_list_for_each_safe(mode, tmp, &output->modes, link) {
+./clients/weston-info.c:578:	init_global_info(info, &output->global, id, "wl_output", version);
+./clients/weston-info.c:579:	output->global.print = print_output_info;
+./clients/weston-info.c:580:	output->global.destroy = destroy_output_info;
+./clients/weston-info.c:582:	output->version = MIN(version, 2);
+./clients/weston-info.c:583:	output->geometry.scale = 1;
+./clients/weston-info.c:584:	wl_list_init(&output->modes);
+./clients/weston-info.c:586:	output->output = wl_registry_bind(info->registry, id,
+./clients/weston-info.c:587:					  &wl_output_interface, output->version);
+./clients/weston-info.c:588:	wl_output_add_listener(output->output, &output_listener,
+./clients/screenshot.c:77:	if (wl_output == output->output) {
+./clients/screenshot.c:78:		output->offset_x = x;
+./clients/screenshot.c:79:		output->offset_y = y;
+./clients/screenshot.c:95:	if (wl_output == output->output && (flags & WL_OUTPUT_MODE_CURRENT)) {
+./clients/screenshot.c:96:		output->width = width;
+./clients/screenshot.c:97:		output->height = height;
+./clients/screenshot.c:124:		output->output = wl_registry_bind(registry, name,
+./clients/screenshot.c:126:		wl_list_insert(&output_list, &output->link);
+./clients/screenshot.c:127:		wl_output_add_listener(output->output, &output_listener, output);
+./clients/screenshot.c:199:		output_stride = output->width * 4;
+./clients/screenshot.c:200:		s = output->data;
+./clients/screenshot.c:201:		d = data + (output->offset_y - min_y) * buffer_stride +
+./clients/screenshot.c:202:			   (output->offset_x - min_x) * 4;
+./clients/screenshot.c:204:		for (i = 0; i < output->height; i++) {
+./clients/screenshot.c:230:		output->offset_x = position;
+./clients/screenshot.c:231:		position += output->width;
+./clients/screenshot.c:235:		min_x = MIN(min_x, output->offset_x);
+./clients/screenshot.c:236:		min_y = MIN(min_y, output->offset_y);
+./clients/screenshot.c:237:		max_x = MAX(max_x, output->offset_x + output->width);
+./clients/screenshot.c:238:		max_y = MAX(max_y, output->offset_y + output->height);
+./clients/screenshot.c:289:		output->buffer = create_shm_buffer(output->width, output->height, &output->data);
+./clients/screenshot.c:291:					   output->output,
+./clients/screenshot.c:292:					   output->buffer);
+./clients/fullscreen.c:163:			    fullscreen->current_output ? output_get_model(fullscreen->current_output->output): "null");
+./clients/fullscreen.c:295:			wl_output = output_get_wl_output(fullscreen->current_output->output);
+./clients/fullscreen.c:316:			if (fullscreen->current_output->link.next == &fullscreen->output_list)
+./clients/fullscreen.c:319:				fsout = wl_container_of(fullscreen->current_output->link.next,
+./clients/fullscreen.c:341:			wl_output = output_get_wl_output(fullscreen->current_output->output);
+./clients/desktop-shell.c:174:		if (output->panel && !output->panel->painted)
+./clients/desktop-shell.c:176:		if (output->background && !output->background->painted)
+./clients/desktop-shell.c:1175:	background_destroy(output->background);
+./clients/desktop-shell.c:1176:	if (output->panel)
+./clients/desktop-shell.c:1177:		panel_destroy(output->panel);
+./clients/desktop-shell.c:1178:	wl_output_destroy(output->output);
+./clients/desktop-shell.c:1179:	wl_list_remove(&output->link);
+./clients/desktop-shell.c:1207:	if (output->panel)
+./clients/desktop-shell.c:1208:		window_set_buffer_transform(output->panel->window, transform);
+./clients/desktop-shell.c:1209:	window_set_buffer_transform(output->background->window, transform);
+./clients/desktop-shell.c:1235:	if (output->panel)
+./clients/desktop-shell.c:1236:		window_set_buffer_scale(output->panel->window, scale);
+./clients/desktop-shell.c:1237:	window_set_buffer_scale(output->background->window, scale);
+./clients/desktop-shell.c:1253:		output->panel = panel_create(desktop);
+./clients/desktop-shell.c:1254:		surface = window_get_wl_surface(output->panel->window);
+./clients/desktop-shell.c:1256:					       output->output, surface);
+./clients/desktop-shell.c:1259:	output->background = background_create(desktop);
+./clients/desktop-shell.c:1260:	surface = window_get_wl_surface(output->background->window);
+./clients/desktop-shell.c:1262:					    output->output, surface);
+./clients/desktop-shell.c:1274:	output->output =
+./clients/desktop-shell.c:1276:	output->server_output_id = id;
+./clients/desktop-shell.c:1278:	wl_output_add_listener(output->output, &output_listener, output);
+./clients/desktop-shell.c:1280:	wl_list_insert(&desktop->outputs, &output->link);
+./clients/desktop-shell.c:1316:			if (output->server_output_id == id) {
+./clients/desktop-shell.c:1434:		if (!output->panel)
+Binary file ./.libs/libweston-2.so.0.0.0 matches
+Binary file ./.libs/wayland-backend.so matches
+Binary file ./.libs/libtest-client.a matches
+Binary file ./.libs/libzunitc.a matches
+Binary file ./.libs/libzunitcmain.a matches
+./.br_filelist_before:890:1c6df9a63c172b847f88095a25ab0135  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-0.conf
+./.br_filelist_before:1506:2f2f7de80eb35c9266d886510b38411e  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
+./.br_filelist_before:1891:3b89385ae89c018aee60bcfdeca53858  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
+./.br_filelist_before:2960:5ecdb0be055984d31b3fcfbe4cfa2b47  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-4.conf
+./.br_filelist_before:3211:658164f871504e9258732711bd871ea0  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-mono.conf
+./.br_filelist_before:3406:6b5dfa8eb2b8d0f1e3130a377291dbd0  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
+./.br_filelist_before:3993:7e238b6fd3acbf194737a0860fea46e3  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf
+./.br_filelist_before:4679:933174c31e545a4c27eeb1533523f543  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-2.conf
+./.br_filelist_before:4734:94ad2d7f68a539e56b5a67e0e27f9037  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-1.conf
+./.br_filelist_before:5444:aafb9dedc0fcba08f1ec6a524a19e8e7  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-3.conf
+./.br_filelist_before:6471:cbf323f5cb80d504a5eee5c4da645500  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
+./.br_filelist_before:6881:d9949cf5133a05064d63524a885aecda  ./usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-5.conf
+./.br_filelist_before:7170:e3f9cf7a28a75fcd774a6c4584ef7a01  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker-always.conf
+./.br_filelist_before:7447:ed7ff23099053639e176d7ed858ca748  ./usr/share/pulseaudio/alsa-mixer/paths/analog-output-headphones-2.conf
+./libweston/compositor-headless.c:41:#include "windowed-output-api.h"
+./libweston/compositor-headless.c:77:	weston_compositor_read_presentation_clock(output->compositor, &ts);
+./libweston/compositor-headless.c:87:	weston_compositor_read_presentation_clock(output->base.compositor, &ts);
+./libweston/compositor-headless.c:88:	weston_output_finish_frame(&output->base, &ts, 0);
+./libweston/compositor-headless.c:98:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-headless.c:100:	ec->renderer->repaint_output(&output->base, damage);
+./libweston/compositor-headless.c:105:	wl_event_source_timer_update(output->finish_frame_timer, 16);
+./libweston/compositor-headless.c:116:	if (!output->base.enabled)
+./libweston/compositor-headless.c:119:	wl_event_source_remove(output->finish_frame_timer);
+./libweston/compositor-headless.c:122:		pixman_renderer_output_destroy(&output->base);
+./libweston/compositor-headless.c:123:		pixman_image_unref(output->image);
+./libweston/compositor-headless.c:124:		free(output->image_buf);
+./libweston/compositor-headless.c:135:	headless_output_disable(&output->base);
+./libweston/compositor-headless.c:136:	weston_output_destroy(&output->base);
+./libweston/compositor-headless.c:149:	output->finish_frame_timer =
+./libweston/compositor-headless.c:153:		output->image_buf = malloc(output->base.current_mode->width *
+./libweston/compositor-headless.c:154:					   output->base.current_mode->height * 4);
+./libweston/compositor-headless.c:155:		if (!output->image_buf)
+./libweston/compositor-headless.c:158:		output->image = pixman_image_create_bits(PIXMAN_x8r8g8b8,
+./libweston/compositor-headless.c:159:							 output->base.current_mode->width,
+./libweston/compositor-headless.c:160:							 output->base.current_mode->height,
+./libweston/compositor-headless.c:161:							 output->image_buf,
+./libweston/compositor-headless.c:162:							 output->base.current_mode->width * 4);
+./libweston/compositor-headless.c:164:		if (pixman_renderer_output_create(&output->base) < 0)
+./libweston/compositor-headless.c:167:		pixman_renderer_output_set_buffer(&output->base,
+./libweston/compositor-headless.c:168:						  output->image);
+./libweston/compositor-headless.c:174:	pixman_image_unref(output->image);
+./libweston/compositor-headless.c:175:	free(output->image_buf);
+./libweston/compositor-headless.c:177:	wl_event_source_remove(output->finish_frame_timer);
+./libweston/compositor-headless.c:190:	assert(!output->base.current_mode);
+./libweston/compositor-headless.c:193:	assert(output->base.scale);
+./libweston/compositor-headless.c:195:	output_width = width * output->base.scale;
+./libweston/compositor-headless.c:196:	output_height = height * output->base.scale;
+./libweston/compositor-headless.c:198:	output->mode.flags =
+./libweston/compositor-headless.c:200:	output->mode.width = output_width;
+./libweston/compositor-headless.c:201:	output->mode.height = output_height;
+./libweston/compositor-headless.c:202:	output->mode.refresh = 60000;
+./libweston/compositor-headless.c:203:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-headless.c:204:	wl_list_insert(&output->base.mode_list, &output->mode.link);
+./libweston/compositor-headless.c:206:	output->base.current_mode = &output->mode;
+./libweston/compositor-headless.c:207:	output->base.make = "weston";
+./libweston/compositor-headless.c:208:	output->base.model = "headless";
+./libweston/compositor-headless.c:211:	output->base.mm_width = width;
+./libweston/compositor-headless.c:212:	output->base.mm_height = height;
+./libweston/compositor-headless.c:214:	output->base.start_repaint_loop = headless_output_start_repaint_loop;
+./libweston/compositor-headless.c:215:	output->base.repaint = headless_output_repaint;
+./libweston/compositor-headless.c:216:	output->base.assign_planes = NULL;
+./libweston/compositor-headless.c:217:	output->base.set_backlight = NULL;
+./libweston/compositor-headless.c:218:	output->base.set_dpms = NULL;
+./libweston/compositor-headless.c:219:	output->base.switch_mode = NULL;
+./libweston/compositor-headless.c:237:	output->base.name = strdup(name);
+./libweston/compositor-headless.c:238:	output->base.destroy = headless_output_destroy;
+./libweston/compositor-headless.c:239:	output->base.disable = headless_output_disable;
+./libweston/compositor-headless.c:240:	output->base.enable = headless_output_enable;
+./libweston/compositor-headless.c:242:	weston_output_init(&output->base, compositor);
+./libweston/compositor-headless.c:243:	weston_compositor_add_pending_output(&output->base, compositor);
+./libweston/zoom.c:42:		output->zoom.spring_z.timestamp = msecs;
+./libweston/zoom.c:44:	weston_spring_update(&output->zoom.spring_z, msecs);
+./libweston/zoom.c:46:	if (output->zoom.spring_z.current > output->zoom.max_level)
+./libweston/zoom.c:47:		output->zoom.spring_z.current = output->zoom.max_level;
+./libweston/zoom.c:48:	else if (output->zoom.spring_z.current < 0.0)
+./libweston/zoom.c:49:		output->zoom.spring_z.current = 0.0;
+./libweston/zoom.c:51:	if (weston_spring_done(&output->zoom.spring_z)) {
+./libweston/zoom.c:52:		if (output->zoom.active && output->zoom.level <= 0.0) {
+./libweston/zoom.c:53:			output->zoom.active = false;
+./libweston/zoom.c:54:			output->zoom.seat = NULL;
+./libweston/zoom.c:55:			output->disable_planes--;
+./libweston/zoom.c:56:			wl_list_remove(&output->zoom.motion_listener.link);
+./libweston/zoom.c:58:		output->zoom.spring_z.current = output->zoom.level;
+./libweston/zoom.c:63:	output->dirty = 1;
+./libweston/zoom.c:71:	float level = output->zoom.spring_z.current;
+./libweston/zoom.c:73:	*x = (*x - output->x) * level + output->width / 2.;
+./libweston/zoom.c:74:	*y = (*y - output->y) * level + output->height / 2.;
+./libweston/zoom.c:80:	double x = output->zoom.current.x; /* global pointer coords */
+./libweston/zoom.c:81:	double y = output->zoom.current.y;
+./libweston/zoom.c:84:	level = output->zoom.spring_z.current;
+./libweston/zoom.c:86:	if (!output->zoom.active || level > output->zoom.max_level ||
+./libweston/zoom.c:92:	output->zoom.trans_x = x - output->width / 2;
+./libweston/zoom.c:93:	output->zoom.trans_y = y - output->height / 2;
+./libweston/zoom.c:95:	if (output->zoom.trans_x < 0)
+./libweston/zoom.c:96:		output->zoom.trans_x = 0;
+./libweston/zoom.c:97:	if (output->zoom.trans_y < 0)
+./libweston/zoom.c:98:		output->zoom.trans_y = 0;
+./libweston/zoom.c:99:	if (output->zoom.trans_x > level * output->width)
+./libweston/zoom.c:100:		output->zoom.trans_x = level * output->width;
+./libweston/zoom.c:101:	if (output->zoom.trans_y > level * output->height)
+./libweston/zoom.c:102:		output->zoom.trans_y = level * output->height;
+./libweston/zoom.c:108:	if (output->zoom.level != output->zoom.spring_z.current) {
+./libweston/zoom.c:109:		output->zoom.spring_z.target = output->zoom.level;
+./libweston/zoom.c:110:		if (wl_list_empty(&output->zoom.animation_z.link)) {
+./libweston/zoom.c:111:			output->zoom.animation_z.frame_counter = 0;
+./libweston/zoom.c:112:			wl_list_insert(output->animation_list.prev,
+./libweston/zoom.c:113:				&output->zoom.animation_z.link);
+./libweston/zoom.c:117:	output->dirty = 1;
+./libweston/zoom.c:124:	struct weston_seat *seat = output->zoom.seat;
+./libweston/zoom.c:127:	assert(output->zoom.active);
+./libweston/zoom.c:129:	output->zoom.current.x = wl_fixed_to_double(pointer->x);
+./libweston/zoom.c:130:	output->zoom.current.y = wl_fixed_to_double(pointer->y);
+./libweston/zoom.c:153:	if (output->zoom.active)
+./libweston/zoom.c:156:	output->zoom.active = true;
+./libweston/zoom.c:157:	output->zoom.seat = seat;
+./libweston/zoom.c:158:	output->disable_planes++;
+./libweston/zoom.c:160:		      &output->zoom.motion_listener);
+./libweston/zoom.c:166:	output->zoom.active = false;
+./libweston/zoom.c:167:	output->zoom.seat = NULL;
+./libweston/zoom.c:168:	output->zoom.increment = 0.07;
+./libweston/zoom.c:169:	output->zoom.max_level = 0.95;
+./libweston/zoom.c:170:	output->zoom.level = 0.0;
+./libweston/zoom.c:171:	output->zoom.trans_x = 0.0;
+./libweston/zoom.c:172:	output->zoom.trans_y = 0.0;
+./libweston/zoom.c:173:	weston_spring_init(&output->zoom.spring_z, 250.0, 0.0, 0.0);
+./libweston/zoom.c:174:	output->zoom.spring_z.friction = 1000;
+./libweston/zoom.c:175:	output->zoom.animation_z.frame = weston_zoom_frame_z;
+./libweston/zoom.c:176:	wl_list_init(&output->zoom.animation_z.link);
+./libweston/zoom.c:177:	output->zoom.motion_listener.notify = motion;
+./libweston/libinput-device.c:130:	width = device->output->current_mode->width;
+./libweston/libinput-device.c:131:	height = device->output->current_mode->height;
+./libweston/libinput-device.c:310:	width = device->output->current_mode->width;
+./libweston/libinput-device.c:311:	height = device->output->current_mode->height;
+./libweston/libinput-device.c:457:	width = device->output->width;
+./libweston/libinput-device.c:458:	height = device->output->height;
+./libweston/libinput-device.c:532:	wl_signal_add(&output->destroy_signal,
+./libweston/input.c:1435:	if (x < output->x)
+./libweston/input.c:1436:		*fx = wl_fixed_from_int(output->x);
+./libweston/input.c:1437:	else if (x >= output->x + output->width)
+./libweston/input.c:1438:		*fx = wl_fixed_from_int(output->x +
+./libweston/input.c:1439:					output->width - 1);
+./libweston/input.c:1440:	if (y < output->y)
+./libweston/input.c:1441:		*fy = wl_fixed_from_int(output->y);
+./libweston/input.c:1442:	else if (y >= output->y + output->height)
+./libweston/input.c:1443:		*fy = wl_fixed_from_int(output->y +
+./libweston/input.c:1444:					output->height - 1);
+./libweston/input.c:1462:		if (pixman_region32_contains_point(&output->region,
+./libweston/input.c:1465:		if (pixman_region32_contains_point(&output->region,
+./libweston/input.c:1531:		if (pixman_region32_contains_point(&output->region,
+./libweston/input.c:1537:		distance = abs(output->x + output->width / 2 - x) +
+./libweston/input.c:1538:			   abs(output->y + output->height / 2 - y);
+./libweston/screenshooter.c:119:	struct weston_compositor *compositor = output->compositor;
+./libweston/screenshooter.c:123:	output->disable_planes--;
+./libweston/screenshooter.c:136:			     0, 0, output->current_mode->width,
+./libweston/screenshooter.c:137:			     output->current_mode->height);
+./libweston/screenshooter.c:150:			copy_bgra_yflip(d, s, output->current_mode->height, stride);
+./libweston/screenshooter.c:152:			copy_bgra(d, pixels, output->current_mode->height, stride);
+./libweston/screenshooter.c:157:			copy_rgba_yflip(d, s, output->current_mode->height, stride);
+./libweston/screenshooter.c:159:			copy_rgba(d, pixels, output->current_mode->height, stride);
+./libweston/screenshooter.c:188:	if (buffer->width < output->current_mode->width ||
+./libweston/screenshooter.c:189:	    buffer->height < output->current_mode->height) {
+./libweston/screenshooter.c:204:	wl_signal_add(&output->frame_signal, &l->listener);
+./libweston/screenshooter.c:205:	output->disable_planes++;
+./libweston/screenshooter.c:261:	struct weston_compositor *compositor = output->compositor;
+./libweston/screenshooter.c:262:	uint32_t msecs = output->frame_time;
+./libweston/screenshooter.c:284:	pixman_region32_intersect(&damage, &output->region,
+./libweston/screenshooter.c:285:				  &output->previous_damage);
+./libweston/screenshooter.c:286:	pixman_region32_translate(&damage, -output->x, -output->y);
+./libweston/screenshooter.c:287:	weston_transformed_region(output->width, output->height,
+./libweston/screenshooter.c:288:				 output->transform, output->current_scale,
+./libweston/screenshooter.c:305:	stride = output->current_mode->width;
+./libweston/screenshooter.c:312:			y_orig = output->current_mode->height - r[i].y2;
+./libweston/screenshooter.c:381:	struct weston_compositor *compositor = output->compositor;
+./libweston/screenshooter.c:395:	stride = output->current_mode->width;
+./libweston/screenshooter.c:396:	size = stride * 4 * output->current_mode->height;
+./libweston/screenshooter.c:437:	header.width = output->current_mode->width;
+./libweston/screenshooter.c:438:	header.height = output->current_mode->height;
+./libweston/screenshooter.c:442:	wl_signal_add(&output->frame_signal, &recorder->frame_listener);
+./libweston/screenshooter.c:443:	output->disable_planes++;
+./libweston/screenshooter.c:458:	recorder->output->disable_planes--;
+./libweston/screenshooter.c:467:	listener = wl_signal_get(&output->frame_signal,
+./libweston/screenshooter.c:471:			   output->name);
+./libweston/screenshooter.c:476:		   output->name, filename);
+./libweston/pixman-renderer.c:70:	return (struct pixman_output_state *)output->renderer_state;
+./libweston/pixman-renderer.c:140:	if (output->zoom.active) {
+./libweston/pixman-renderer.c:141:		weston_matrix_transform_region(region, &output->matrix, region);
+./libweston/pixman-renderer.c:143:		pixman_region32_translate(region, -output->x, -output->y);
+./libweston/pixman-renderer.c:144:		weston_transformed_region(output->width, output->height,
+./libweston/pixman-renderer.c:145:					  output->transform,
+./libweston/pixman-renderer.c:146:					  output->current_scale,
+./libweston/pixman-renderer.c:180:	matrix = output->inverse_matrix;
+./libweston/pixman-renderer.c:335:		(struct pixman_renderer *) output->compositor->renderer;
+./libweston/pixman-renderer.c:349:	if (ev->transform.enabled || output->current_scale != vp->buffer.scale)
+./libweston/pixman-renderer.c:521:	struct weston_compositor *compositor = output->compositor;
+./libweston/pixman-renderer.c:568:	pixman_region32_copy(&output->previous_damage, output_damage);
+./libweston/pixman-renderer.c:569:	wl_signal_emit(&output->frame_signal, output);
+./libweston/pixman-renderer.c:874:		output->compositor->read_format = pixman_image_get_format(po->hw_buffer);
+./libweston/pixman-renderer.c:890:	w = output->current_mode->width;
+./libweston/pixman-renderer.c:891:	h = output->current_mode->height;
+./libweston/pixman-renderer.c:910:	output->renderer_state = po;
+./libweston/animation.c:243:		wl_list_insert(&view->output->animation_list,
+./libweston/compositor-wayland.c:60:#include "windowed-output-api.h"
+./libweston/compositor-wayland.c:244:		wl_list_insert(&sb->output->shm.free_buffers, &sb->free_link);
+./libweston/compositor-wayland.c:258:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:268:	if (!wl_list_empty(&output->shm.free_buffers)) {
+./libweston/compositor-wayland.c:269:		sb = container_of(output->shm.free_buffers.next,
+./libweston/compositor-wayland.c:277:	if (output->frame) {
+./libweston/compositor-wayland.c:278:		width = frame_width(output->frame);
+./libweston/compositor-wayland.c:279:		height = frame_height(output->frame);
+./libweston/compositor-wayland.c:281:		width = output->base.current_mode->width;
+./libweston/compositor-wayland.c:282:		height = output->base.current_mode->height;
+./libweston/compositor-wayland.c:310:	wl_list_insert(&output->shm.buffers, &sb->link);
+./libweston/compositor-wayland.c:313:				  output->base.width, output->base.height);
+./libweston/compositor-wayland.c:337:	if (output->frame)
+./libweston/compositor-wayland.c:338:		frame_interior(output->frame, &fx, &fy, 0, 0);
+./libweston/compositor-wayland.c:353:	assert(callback == output->frame_cb);
+./libweston/compositor-wayland.c:355:	output->frame_cb = NULL;
+./libweston/compositor-wayland.c:366:	weston_compositor_read_presentation_clock(output->base.compositor, &ts);
+./libweston/compositor-wayland.c:367:	weston_output_finish_frame(&output->base, &ts, 0);
+./libweston/compositor-wayland.c:383:	if (output->gl.egl_window)
+./libweston/compositor-wayland.c:386:	wl_surface_attach(output->parent.surface, sb->buffer, 0, 0);
+./libweston/compositor-wayland.c:387:	wl_surface_damage(output->parent.surface, 0, 0,
+./libweston/compositor-wayland.c:388:			  output->base.current_mode->width,
+./libweston/compositor-wayland.c:389:			  output->base.current_mode->height);
+./libweston/compositor-wayland.c:399:	if (!output->frame)
+./libweston/compositor-wayland.c:401:	if (!(frame_status(output->frame) & FRAME_STATUS_REPAINT))
+./libweston/compositor-wayland.c:404:	fwidth = frame_width(output->frame);
+./libweston/compositor-wayland.c:405:	fheight = frame_height(output->frame);
+./libweston/compositor-wayland.c:406:	frame_interior(output->frame, &ix, &iy, &iwidth, &iheight);
+./libweston/compositor-wayland.c:408:	if (!output->gl.border.top)
+./libweston/compositor-wayland.c:409:		output->gl.border.top =
+./libweston/compositor-wayland.c:412:	cr = cairo_create(output->gl.border.top);
+./libweston/compositor-wayland.c:413:	frame_repaint(output->frame, cr);
+./libweston/compositor-wayland.c:415:	gl_renderer->output_set_border(&output->base, GL_RENDERER_BORDER_TOP,
+./libweston/compositor-wayland.c:417:				       cairo_image_surface_get_stride(output->gl.border.top) / 4,
+./libweston/compositor-wayland.c:418:				       cairo_image_surface_get_data(output->gl.border.top));
+./libweston/compositor-wayland.c:421:	if (!output->gl.border.left)
+./libweston/compositor-wayland.c:422:		output->gl.border.left =
+./libweston/compositor-wayland.c:425:	cr = cairo_create(output->gl.border.left);
+./libweston/compositor-wayland.c:427:	frame_repaint(output->frame, cr);
+./libweston/compositor-wayland.c:429:	gl_renderer->output_set_border(&output->base, GL_RENDERER_BORDER_LEFT,
+./libweston/compositor-wayland.c:431:				       cairo_image_surface_get_stride(output->gl.border.left) / 4,
+./libweston/compositor-wayland.c:432:				       cairo_image_surface_get_data(output->gl.border.left));
+./libweston/compositor-wayland.c:435:	if (!output->gl.border.right)
+./libweston/compositor-wayland.c:436:		output->gl.border.right =
+./libweston/compositor-wayland.c:439:	cr = cairo_create(output->gl.border.right);
+./libweston/compositor-wayland.c:441:	frame_repaint(output->frame, cr);
+./libweston/compositor-wayland.c:443:	gl_renderer->output_set_border(&output->base, GL_RENDERER_BORDER_RIGHT,
+./libweston/compositor-wayland.c:445:				       cairo_image_surface_get_stride(output->gl.border.right) / 4,
+./libweston/compositor-wayland.c:446:				       cairo_image_surface_get_data(output->gl.border.right));
+./libweston/compositor-wayland.c:449:	if (!output->gl.border.bottom)
+./libweston/compositor-wayland.c:450:		output->gl.border.bottom =
+./libweston/compositor-wayland.c:453:	cr = cairo_create(output->gl.border.bottom);
+./libweston/compositor-wayland.c:455:	frame_repaint(output->frame, cr);
+./libweston/compositor-wayland.c:457:	gl_renderer->output_set_border(&output->base, GL_RENDERER_BORDER_BOTTOM,
+./libweston/compositor-wayland.c:459:				       cairo_image_surface_get_stride(output->gl.border.bottom) / 4,
+./libweston/compositor-wayland.c:460:				       cairo_image_surface_get_data(output->gl.border.bottom));
+./libweston/compositor-wayland.c:469:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:476:	if (output->parent.draw_initial_frame) {
+./libweston/compositor-wayland.c:477:		output->parent.draw_initial_frame = false;
+./libweston/compositor-wayland.c:482:	output->frame_cb = wl_surface_frame(output->parent.surface);
+./libweston/compositor-wayland.c:483:	wl_callback_add_listener(output->frame_cb, &frame_listener, output);
+./libweston/compositor-wayland.c:484:	wl_surface_commit(output->parent.surface);
+./libweston/compositor-wayland.c:494:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-wayland.c:496:	output->frame_cb = wl_surface_frame(output->parent.surface);
+./libweston/compositor-wayland.c:497:	wl_callback_add_listener(output->frame_cb, &frame_listener, output);
+./libweston/compositor-wayland.c:501:	ec->renderer->repaint_output(&output->base, damage);
+./libweston/compositor-wayland.c:515:	if (!buffer->output->frame || !buffer->frame_damaged)
+./libweston/compositor-wayland.c:520:	frame_interior(buffer->output->frame, &ix, &iy, &iwidth, &iheight);
+./libweston/compositor-wayland.c:521:	fwidth = frame_width(buffer->output->frame);
+./libweston/compositor-wayland.c:522:	fheight = frame_height(buffer->output->frame);
+./libweston/compositor-wayland.c:541:	frame_repaint(buffer->output->frame, cr);
+./libweston/compositor-wayland.c:558:	weston_transformed_region(sb->output->base.width,
+./libweston/compositor-wayland.c:559:				  sb->output->base.height,
+./libweston/compositor-wayland.c:560:				  sb->output->base.transform,
+./libweston/compositor-wayland.c:561:				  sb->output->base.current_scale,
+./libweston/compositor-wayland.c:564:	if (sb->output->frame) {
+./libweston/compositor-wayland.c:565:		frame_interior(sb->output->frame, &ix, &iy, &iwidth, &iheight);
+./libweston/compositor-wayland.c:566:		fwidth = frame_width(sb->output->frame);
+./libweston/compositor-wayland.c:567:		fheight = frame_height(sb->output->frame);
+./libweston/compositor-wayland.c:586:	wl_surface_attach(sb->output->parent.surface, sb->buffer, 0, 0);
+./libweston/compositor-wayland.c:588:		wl_surface_damage(sb->output->parent.surface, rects[i].x1,
+./libweston/compositor-wayland.c:592:	if (sb->output->frame)
+./libweston/compositor-wayland.c:602:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:605:	if (output->frame) {
+./libweston/compositor-wayland.c:606:		if (frame_status(output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:607:			wl_list_for_each(sb, &output->shm.buffers, link)
+./libweston/compositor-wayland.c:611:	wl_list_for_each(sb, &output->shm.buffers, link)
+./libweston/compositor-wayland.c:622:	output->frame_cb = wl_surface_frame(output->parent.surface);
+./libweston/compositor-wayland.c:623:	wl_callback_add_listener(output->frame_cb, &frame_listener, output);
+./libweston/compositor-wayland.c:624:	wl_surface_commit(output->parent.surface);
+./libweston/compositor-wayland.c:639:	if (output->parent.xdg_toplevel)
+./libweston/compositor-wayland.c:640:		zxdg_toplevel_v6_destroy(output->parent.xdg_toplevel);
+./libweston/compositor-wayland.c:642:	if (output->parent.xdg_surface)
+./libweston/compositor-wayland.c:643:		zxdg_surface_v6_destroy(output->parent.xdg_surface);
+./libweston/compositor-wayland.c:645:	if (output->parent.shell_surface)
+./libweston/compositor-wayland.c:646:		wl_shell_surface_destroy(output->parent.shell_surface);
+./libweston/compositor-wayland.c:648:	wl_surface_destroy(output->parent.surface);
+./libweston/compositor-wayland.c:657:	wl_list_for_each_safe(buffer, next, &output->shm.free_buffers, free_link)
+./libweston/compositor-wayland.c:660:	wl_list_for_each(buffer, &output->shm.buffers, link)
+./libweston/compositor-wayland.c:670:	if (!output->base.enabled)
+./libweston/compositor-wayland.c:674:		pixman_renderer_output_destroy(&output->base);
+./libweston/compositor-wayland.c:677:		gl_renderer->output_destroy(&output->base);
+./libweston/compositor-wayland.c:678:		wl_egl_window_destroy(output->gl.egl_window);
+./libweston/compositor-wayland.c:686:	if (output->frame)
+./libweston/compositor-wayland.c:687:		frame_destroy(output->frame);
+./libweston/compositor-wayland.c:689:	cairo_surface_destroy(output->gl.border.top);
+./libweston/compositor-wayland.c:690:	cairo_surface_destroy(output->gl.border.left);
+./libweston/compositor-wayland.c:691:	cairo_surface_destroy(output->gl.border.right);
+./libweston/compositor-wayland.c:692:	cairo_surface_destroy(output->gl.border.bottom);
+./libweston/compositor-wayland.c:702:	wayland_output_disable(&output->base);
+./libweston/compositor-wayland.c:704:	weston_output_destroy(&output->base);
+./libweston/compositor-wayland.c:706:	if (output->frame_cb)
+./libweston/compositor-wayland.c:707:		wl_callback_destroy(output->frame_cb);
+./libweston/compositor-wayland.c:720:	if (output->frame) {
+./libweston/compositor-wayland.c:721:		fwidth = frame_width(output->frame);
+./libweston/compositor-wayland.c:722:		fheight = frame_height(output->frame);
+./libweston/compositor-wayland.c:724:		fwidth = output->base.current_mode->width;
+./libweston/compositor-wayland.c:725:		fheight = output->base.current_mode->height;
+./libweston/compositor-wayland.c:728:	output->gl.egl_window =
+./libweston/compositor-wayland.c:729:		wl_egl_window_create(output->parent.surface,
+./libweston/compositor-wayland.c:731:	if (!output->gl.egl_window) {
+./libweston/compositor-wayland.c:736:	if (gl_renderer->output_window_create(&output->base,
+./libweston/compositor-wayland.c:737:					      output->gl.egl_window,
+./libweston/compositor-wayland.c:738:					      output->gl.egl_window,
+./libweston/compositor-wayland.c:747:	wl_egl_window_destroy(output->gl.egl_window);
+./libweston/compositor-wayland.c:755:	return pixman_renderer_output_create(&output->base);
+./libweston/compositor-wayland.c:762:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:767:	width = output->base.current_mode->width;
+./libweston/compositor-wayland.c:768:	height = output->base.current_mode->height;
+./libweston/compositor-wayland.c:770:	if (output->frame) {
+./libweston/compositor-wayland.c:771:		frame_resize_inside(output->frame, width, height);
+./libweston/compositor-wayland.c:773:		frame_input_rect(output->frame, &ix, &iy, &iwidth, &iheight);
+./libweston/compositor-wayland.c:776:		wl_surface_set_input_region(output->parent.surface, region);
+./libweston/compositor-wayland.c:779:		frame_opaque_rect(output->frame, &ix, &iy, &iwidth, &iheight);
+./libweston/compositor-wayland.c:782:		wl_surface_set_opaque_region(output->parent.surface, region);
+./libweston/compositor-wayland.c:785:		width = frame_width(output->frame);
+./libweston/compositor-wayland.c:786:		height = frame_height(output->frame);
+./libweston/compositor-wayland.c:790:		wl_surface_set_input_region(output->parent.surface, region);
+./libweston/compositor-wayland.c:795:		wl_surface_set_opaque_region(output->parent.surface, region);
+./libweston/compositor-wayland.c:800:	if (output->gl.egl_window) {
+./libweston/compositor-wayland.c:801:		wl_egl_window_resize(output->gl.egl_window,
+./libweston/compositor-wayland.c:805:		gl_renderer->output_set_border(&output->base,
+./libweston/compositor-wayland.c:808:		cairo_surface_destroy(output->gl.border.top);
+./libweston/compositor-wayland.c:809:		output->gl.border.top = NULL;
+./libweston/compositor-wayland.c:810:		gl_renderer->output_set_border(&output->base,
+./libweston/compositor-wayland.c:813:		cairo_surface_destroy(output->gl.border.left);
+./libweston/compositor-wayland.c:814:		output->gl.border.left = NULL;
+./libweston/compositor-wayland.c:815:		gl_renderer->output_set_border(&output->base,
+./libweston/compositor-wayland.c:818:		cairo_surface_destroy(output->gl.border.right);
+./libweston/compositor-wayland.c:819:		output->gl.border.right = NULL;
+./libweston/compositor-wayland.c:820:		gl_renderer->output_set_border(&output->base,
+./libweston/compositor-wayland.c:823:		cairo_surface_destroy(output->gl.border.bottom);
+./libweston/compositor-wayland.c:824:		output->gl.border.bottom = NULL;
+./libweston/compositor-wayland.c:835:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:839:	if (output->frame)
+./libweston/compositor-wayland.c:842:	if (output->name) {
+./libweston/compositor-wayland.c:843:		tlen = strlen(output->name) + strlen(WINDOW_TITLE " - ");
+./libweston/compositor-wayland.c:848:		snprintf(title, tlen + 1, WINDOW_TITLE " - %s", output->name);
+./libweston/compositor-wayland.c:853:	if (output->parent.xdg_toplevel)
+./libweston/compositor-wayland.c:854:		zxdg_toplevel_v6_set_title(output->parent.xdg_toplevel, title);
+./libweston/compositor-wayland.c:863:	output->frame = frame_create(b->theme, 100, 100,
+./libweston/compositor-wayland.c:866:	if (!output->frame)
+./libweston/compositor-wayland.c:869:	if (output->keyboard_count)
+./libweston/compositor-wayland.c:870:		frame_set_flag(output->frame, FRAME_FLAG_ACTIVE);
+./libweston/compositor-wayland.c:874:	if (output->parent.shell_surface)
+./libweston/compositor-wayland.c:875:		wl_shell_surface_set_toplevel(output->parent.shell_surface);
+./libweston/compositor-wayland.c:886:		to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:888:	if (output->frame) {
+./libweston/compositor-wayland.c:889:		frame_destroy(output->frame);
+./libweston/compositor-wayland.c:890:		output->frame = NULL;
+./libweston/compositor-wayland.c:895:	if (output->parent.xdg_toplevel) {
+./libweston/compositor-wayland.c:896:		zxdg_toplevel_v6_set_fullscreen(output->parent.xdg_toplevel, target);
+./libweston/compositor-wayland.c:897:	} else if (output->parent.shell_surface) {
+./libweston/compositor-wayland.c:898:		wl_shell_surface_set_fullscreen(output->parent.shell_surface,
+./libweston/compositor-wayland.c:902:							output->parent.surface,
+./libweston/compositor-wayland.c:914:	wl_list_for_each(mode, &output->base.mode_list, link)
+./libweston/compositor-wayland.c:921:	wl_list_for_each(mode, &output->base.mode_list, link)
+./libweston/compositor-wayland.c:998:	if (output->parent.xdg_surface || output->parent.shell_surface || !b->parent.fshell)
+./libweston/compositor-wayland.c:1005:	if (output->base.current_mode == mode)
+./libweston/compositor-wayland.c:1008:	old_mode = output->base.current_mode;
+./libweston/compositor-wayland.c:1009:	old_surface = output->parent.surface;
+./libweston/compositor-wayland.c:1010:	output->base.current_mode = mode;
+./libweston/compositor-wayland.c:1011:	output->parent.surface =
+./libweston/compositor-wayland.c:1013:	wl_surface_set_user_data(output->parent.surface, output);
+./libweston/compositor-wayland.c:1020:								 output->parent.surface,
+./libweston/compositor-wayland.c:1021:								 output->parent.output,
+./libweston/compositor-wayland.c:1028:	output->parent.draw_initial_frame = true;
+./libweston/compositor-wayland.c:1029:	wayland_output_start_repaint_loop(&output->base);
+./libweston/compositor-wayland.c:1038:		output->base.current_mode = old_mode;
+./libweston/compositor-wayland.c:1039:		wl_surface_destroy(output->parent.surface);
+./libweston/compositor-wayland.c:1040:		output->parent.surface = old_surface;
+./libweston/compositor-wayland.c:1047:	output->base.current_mode->flags |= WL_OUTPUT_MODE_CURRENT;
+./libweston/compositor-wayland.c:1056:		wl_egl_window_destroy(output->gl.egl_window);
+./libweston/compositor-wayland.c:1063:	weston_output_schedule_repaint(&output->base);
+./libweston/compositor-wayland.c:1090:	output->parent.configure_width = width;
+./libweston/compositor-wayland.c:1091:	output->parent.configure_height = height;
+./libweston/compositor-wayland.c:1093:	output->parent.wait_for_configure = false;
+./libweston/compositor-wayland.c:1110:	struct wayland_backend *b = to_wayland_backend(output->base.compositor);
+./libweston/compositor-wayland.c:1112:	output->parent.surface =
+./libweston/compositor-wayland.c:1114:	if (!output->parent.surface)
+./libweston/compositor-wayland.c:1117:	wl_surface_set_user_data(output->parent.surface, output);
+./libweston/compositor-wayland.c:1119:	output->parent.draw_initial_frame = true;
+./libweston/compositor-wayland.c:1122:		output->parent.xdg_surface =
+./libweston/compositor-wayland.c:1124:						      output->parent.surface);
+./libweston/compositor-wayland.c:1125:		zxdg_surface_v6_add_listener(output->parent.xdg_surface,
+./libweston/compositor-wayland.c:1128:		output->parent.xdg_toplevel =
+./libweston/compositor-wayland.c:1129:			zxdg_surface_v6_get_toplevel(output->parent.xdg_surface);
+./libweston/compositor-wayland.c:1130:		zxdg_toplevel_v6_add_listener(output->parent.xdg_toplevel,
+./libweston/compositor-wayland.c:1133:		wl_surface_commit(output->parent.surface);
+./libweston/compositor-wayland.c:1135:		output->parent.wait_for_configure = true;
+./libweston/compositor-wayland.c:1137:		while (output->parent.wait_for_configure)
+./libweston/compositor-wayland.c:1143:		output->parent.shell_surface =
+./libweston/compositor-wayland.c:1145:						   output->parent.surface);
+./libweston/compositor-wayland.c:1146:		if (!output->parent.shell_surface) {
+./libweston/compositor-wayland.c:1147:			wl_surface_destroy(output->parent.surface);
+./libweston/compositor-wayland.c:1151:		wl_shell_surface_add_listener(output->parent.shell_surface,
+./libweston/compositor-wayland.c:1168:		   output->base.current_mode->width,
+./libweston/compositor-wayland.c:1169:		   output->base.current_mode->height,
+./libweston/compositor-wayland.c:1170:		   output->base.x, output->base.y);
+./libweston/compositor-wayland.c:1172:	if (!output->parent.surface)
+./libweston/compositor-wayland.c:1178:	wl_list_init(&output->shm.buffers);
+./libweston/compositor-wayland.c:1179:	wl_list_init(&output->shm.free_buffers);
+./libweston/compositor-wayland.c:1185:		output->base.repaint = wayland_output_repaint_pixman;
+./libweston/compositor-wayland.c:1191:		output->base.repaint = wayland_output_repaint_gl;
+./libweston/compositor-wayland.c:1195:	output->base.start_repaint_loop = wayland_output_start_repaint_loop;
+./libweston/compositor-wayland.c:1196:	output->base.assign_planes = NULL;
+./libweston/compositor-wayland.c:1197:	output->base.set_backlight = NULL;
+./libweston/compositor-wayland.c:1198:	output->base.set_dpms = NULL;
+./libweston/compositor-wayland.c:1199:	output->base.switch_mode = wayland_output_switch_mode;
+./libweston/compositor-wayland.c:1204:					      output->mode.refresh, output->parent.output);
+./libweston/compositor-wayland.c:1206:		if (output->parent.xdg_toplevel) {
+./libweston/compositor-wayland.c:1207:			zxdg_toplevel_v6_set_fullscreen(output->parent.xdg_toplevel,
+./libweston/compositor-wayland.c:1208:							output->parent.output);
+./libweston/compositor-wayland.c:1210:		else if (output->parent.shell_surface) {
+./libweston/compositor-wayland.c:1211:			wl_shell_surface_set_fullscreen(output->parent.shell_surface,
+./libweston/compositor-wayland.c:1213:							output->mode.refresh, output->parent.output);
+./libweston/compositor-wayland.c:1216:								output->parent.surface,
+./libweston/compositor-wayland.c:1218:								output->parent.output);
+./libweston/compositor-wayland.c:1221:										 output->parent.surface,
+./libweston/compositor-wayland.c:1222:										 output->parent.output,
+./libweston/compositor-wayland.c:1223:										 output->mode.refresh));
+./libweston/compositor-wayland.c:1250:	output->base.destroy = wayland_output_destroy;
+./libweston/compositor-wayland.c:1251:	output->base.disable = wayland_output_disable;
+./libweston/compositor-wayland.c:1252:	output->base.enable = wayland_output_enable;
+./libweston/compositor-wayland.c:1265:	output->base.name = strdup(name);
+./libweston/compositor-wayland.c:1267:	weston_output_init(&output->base, compositor);
+./libweston/compositor-wayland.c:1268:	weston_compositor_add_pending_output(&output->base, compositor);
+./libweston/compositor-wayland.c:1280:	assert(!output->base.current_mode);
+./libweston/compositor-wayland.c:1283:	assert(output->base.scale);
+./libweston/compositor-wayland.c:1287:			   width, output->base.name);
+./libweston/compositor-wayland.c:1293:			   height, output->base.name);
+./libweston/compositor-wayland.c:1297:	output_width = width * output->base.scale;
+./libweston/compositor-wayland.c:1298:	output_height = height * output->base.scale;
+./libweston/compositor-wayland.c:1300:	output->mode.flags =
+./libweston/compositor-wayland.c:1303:	output->mode.width = output_width;
+./libweston/compositor-wayland.c:1304:	output->mode.height = output_height;
+./libweston/compositor-wayland.c:1305:	output->mode.refresh = 60000;
+./libweston/compositor-wayland.c:1306:	output->scale = output->base.scale;
+./libweston/compositor-wayland.c:1307:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-wayland.c:1308:	wl_list_insert(&output->base.mode_list, &output->mode.link);
+./libweston/compositor-wayland.c:1310:	output->base.current_mode = &output->mode;
+./libweston/compositor-wayland.c:1311:	output->base.make = "wayland";
+./libweston/compositor-wayland.c:1312:	output->base.model = "none";
+./libweston/compositor-wayland.c:1315:	output->base.mm_width = width;
+./libweston/compositor-wayland.c:1316:	output->base.mm_height = height;
+./libweston/compositor-wayland.c:1328:	output->base.name = strdup("wlparent");
+./libweston/compositor-wayland.c:1330:	if (poutput->current_mode) {
+./libweston/compositor-wayland.c:1331:		mode = poutput->current_mode;
+./libweston/compositor-wayland.c:1332:	} else if (poutput->preferred_mode) {
+./libweston/compositor-wayland.c:1333:		mode = poutput->preferred_mode;
+./libweston/compositor-wayland.c:1334:	} else if (!wl_list_empty(&poutput->mode_list)) {
+./libweston/compositor-wayland.c:1335:		mode = container_of(poutput->mode_list.next,
+./libweston/compositor-wayland.c:1342:	weston_output_init(&output->base, b->compositor);
+./libweston/compositor-wayland.c:1344:	output->base.scale = 1;
+./libweston/compositor-wayland.c:1345:	output->base.transform = WL_OUTPUT_TRANSFORM_NORMAL;
+./libweston/compositor-wayland.c:1347:	if (wayland_output_set_size(&output->base, mode->width, mode->height) < 0)
+./libweston/compositor-wayland.c:1350:	output->mode = *mode;
+./libweston/compositor-wayland.c:1351:	output->parent.output = poutput->global;
+./libweston/compositor-wayland.c:1353:	output->base.make = poutput->physical.make;
+./libweston/compositor-wayland.c:1354:	output->base.model = poutput->physical.model;
+./libweston/compositor-wayland.c:1356:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-wayland.c:1357:	wl_list_insert_list(&output->base.mode_list, &poutput->mode_list);
+./libweston/compositor-wayland.c:1358:	wl_list_init(&poutput->mode_list);
+./libweston/compositor-wayland.c:1360:	weston_compositor_add_pending_output(&output->base, b->compositor);
+./libweston/compositor-wayland.c:1365:	free(output->name);
+./libweston/compositor-wayland.c:1377:	output->base.name = strdup("wayland-fullscreen");
+./libweston/compositor-wayland.c:1379:	weston_output_init(&output->base, b->compositor);
+./libweston/compositor-wayland.c:1381:	output->base.scale = 1;
+./libweston/compositor-wayland.c:1382:	output->base.transform = WL_OUTPUT_TRANSFORM_NORMAL;
+./libweston/compositor-wayland.c:1389:		if (output->parent.xdg_toplevel)
+./libweston/compositor-wayland.c:1390:			zxdg_toplevel_v6_set_fullscreen(output->parent.xdg_toplevel,
+./libweston/compositor-wayland.c:1391:							output->parent.output);
+./libweston/compositor-wayland.c:1392:		else if (output->parent.shell_surface)
+./libweston/compositor-wayland.c:1393:			wl_shell_surface_set_fullscreen(output->parent.shell_surface,
+./libweston/compositor-wayland.c:1398:		width = output->parent.configure_width;
+./libweston/compositor-wayland.c:1399:		height = output->parent.configure_height;
+./libweston/compositor-wayland.c:1402:	if (wayland_output_set_size(&output->base, width, height) < 0)
+./libweston/compositor-wayland.c:1405:	weston_compositor_add_pending_output(&output->base, b->compositor);
+./libweston/compositor-wayland.c:1412:	free(output->name);
+./libweston/compositor-wayland.c:1431:	output->parent.configure_width = width;
+./libweston/compositor-wayland.c:1432:	output->parent.configure_height = height;
+./libweston/compositor-wayland.c:1494:	if (input->output->frame) {
+./libweston/compositor-wayland.c:1495:		location = frame_pointer_enter(input->output->frame, input,
+./libweston/compositor-wayland.c:1497:		frame_interior(input->output->frame, &fx, &fy, NULL, NULL);
+./libweston/compositor-wayland.c:1501:		if (frame_status(input->output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1502:			weston_output_schedule_repaint(&input->output->base);
+./libweston/compositor-wayland.c:1507:	weston_output_transform_coordinate(&input->output->base, x, y, &x, &y);
+./libweston/compositor-wayland.c:1511:		notify_pointer_focus(&input->base, &input->output->base, x, y);
+./libweston/compositor-wayland.c:1530:	if (input->output->frame) {
+./libweston/compositor-wayland.c:1531:		frame_pointer_leave(input->output->frame, input);
+./libweston/compositor-wayland.c:1533:		if (frame_status(input->output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1534:			weston_output_schedule_repaint(&input->output->base);
+./libweston/compositor-wayland.c:1558:	if (input->output->frame) {
+./libweston/compositor-wayland.c:1559:		location = frame_pointer_motion(input->output->frame, input,
+./libweston/compositor-wayland.c:1561:		frame_interior(input->output->frame, &fx, &fy, NULL, NULL);
+./libweston/compositor-wayland.c:1565:		if (frame_status(input->output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1566:			weston_output_schedule_repaint(&input->output->base);
+./libweston/compositor-wayland.c:1571:	weston_output_transform_coordinate(&input->output->base, x, y, &x, &y);
+./libweston/compositor-wayland.c:1582:		notify_pointer_focus(&input->base, &input->output->base, x, y);
+./libweston/compositor-wayland.c:1607:	if (input->output->frame) {
+./libweston/compositor-wayland.c:1608:		location = frame_pointer_button(input->output->frame, input,
+./libweston/compositor-wayland.c:1611:		if (frame_status(input->output->frame) & FRAME_STATUS_MOVE) {
+./libweston/compositor-wayland.c:1612:			if (input->output->parent.xdg_toplevel)
+./libweston/compositor-wayland.c:1613:				zxdg_toplevel_v6_move(input->output->parent.xdg_toplevel,
+./libweston/compositor-wayland.c:1615:			else if (input->output->parent.shell_surface)
+./libweston/compositor-wayland.c:1616:				wl_shell_surface_move(input->output->parent.shell_surface,
+./libweston/compositor-wayland.c:1618:			frame_status_clear(input->output->frame,
+./libweston/compositor-wayland.c:1623:		if (frame_status(input->output->frame) & FRAME_STATUS_CLOSE) {
+./libweston/compositor-wayland.c:1624:			wayland_output_destroy(&input->output->base);
+./libweston/compositor-wayland.c:1634:		if (frame_status(input->output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1635:			weston_output_schedule_repaint(&input->output->base);
+./libweston/compositor-wayland.c:1934:	if (output->frame) {
+./libweston/compositor-wayland.c:1935:		location = frame_touch_down(output->frame, input, id, x, y);
+./libweston/compositor-wayland.c:1937:		frame_interior(output->frame, &fx, &fy, NULL, NULL);
+./libweston/compositor-wayland.c:1941:		if (frame_status(output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1942:			weston_output_schedule_repaint(&output->base);
+./libweston/compositor-wayland.c:1944:		if (first_touch && (frame_status(output->frame) & FRAME_STATUS_MOVE)) {
+./libweston/compositor-wayland.c:1946:			if (output->parent.xdg_toplevel)
+./libweston/compositor-wayland.c:1947:				zxdg_toplevel_v6_move(output->parent.xdg_toplevel,
+./libweston/compositor-wayland.c:1949:			else if (output->parent.shell_surface)
+./libweston/compositor-wayland.c:1950:				wl_shell_surface_move(output->parent.shell_surface,
+./libweston/compositor-wayland.c:1952:			frame_status_clear(output->frame,
+./libweston/compositor-wayland.c:1961:	weston_output_transform_coordinate(&output->base, x, y, &x, &y);
+./libweston/compositor-wayland.c:1984:	if (output->frame) {
+./libweston/compositor-wayland.c:1985:		frame_touch_up(output->frame, input, id);
+./libweston/compositor-wayland.c:1987:		if (frame_status(output->frame) & FRAME_STATUS_CLOSE) {
+./libweston/compositor-wayland.c:1988:			wayland_output_destroy(&output->base);
+./libweston/compositor-wayland.c:1996:		if (frame_status(output->frame) & FRAME_STATUS_REPAINT)
+./libweston/compositor-wayland.c:1997:			weston_output_schedule_repaint(&output->base);
+./libweston/compositor-wayland.c:2020:	if (output->frame) {
+./libweston/compositor-wayland.c:2021:		frame_interior(output->frame, &fx, &fy, NULL, NULL);
+./libweston/compositor-wayland.c:2026:	weston_output_transform_coordinate(&output->base, x, y, &x, &y);
+./libweston/compositor-wayland.c:2160:	output->x = x;
+./libweston/compositor-wayland.c:2161:	output->y = y;
+./libweston/compositor-wayland.c:2162:	output->physical.width = physical_width;
+./libweston/compositor-wayland.c:2163:	output->physical.height = physical_height;
+./libweston/compositor-wayland.c:2164:	output->physical.subpixel = subpixel;
+./libweston/compositor-wayland.c:2166:	free(output->physical.make);
+./libweston/compositor-wayland.c:2167:	output->physical.make = strdup(make);
+./libweston/compositor-wayland.c:2168:	free(output->physical.model);
+./libweston/compositor-wayland.c:2169:	output->physical.model = strdup(model);
+./libweston/compositor-wayland.c:2171:	output->transform = transform;
+./libweston/compositor-wayland.c:2205:	if (output->output) {
+./libweston/compositor-wayland.c:2206:		mode = find_mode(&output->output->base.mode_list,
+./libweston/compositor-wayland.c:2213:		mode = find_mode(&output->mode_list, width, height, refresh);
+./libweston/compositor-wayland.c:2218:			output->current_mode = mode;
+./libweston/compositor-wayland.c:2220:			output->preferred_mode = mode;
+./libweston/compositor-wayland.c:2238:	output->id = id;
+./libweston/compositor-wayland.c:2239:	output->global = wl_registry_bind(b->parent.registry, id,
+./libweston/compositor-wayland.c:2241:	if (!output->global) {
+./libweston/compositor-wayland.c:2246:	wl_output_add_listener(output->global, &output_listener, output);
+./libweston/compositor-wayland.c:2248:	output->scale = 0;
+./libweston/compositor-wayland.c:2249:	output->transform = WL_OUTPUT_TRANSFORM_NORMAL;
+./libweston/compositor-wayland.c:2250:	output->physical.subpixel = WL_OUTPUT_SUBPIXEL_UNKNOWN;
+./libweston/compositor-wayland.c:2251:	wl_list_init(&output->mode_list);
+./libweston/compositor-wayland.c:2252:	wl_list_insert(&b->parent.output_list, &output->link);
+./libweston/compositor-wayland.c:2265:	if (output->output)
+./libweston/compositor-wayland.c:2266:		wayland_output_destroy(&output->output->base);
+./libweston/compositor-wayland.c:2268:	wl_output_destroy(output->global);
+./libweston/compositor-wayland.c:2269:	free(output->physical.make);
+./libweston/compositor-wayland.c:2270:	free(output->physical.model);
+./libweston/compositor-wayland.c:2272:	wl_list_for_each_safe(mode, next, &output->mode_list, link) {
+./libweston/compositor-wayland.c:2330:		if (output->id == name)
+./libweston/compositor-wayland.c:2452:	if (input->output->frame)
+./libweston/compositor-wayland.c:2457:	weston_output_schedule_repaint(&input->output->base);
+./libweston/libinput-seat.c:99:			if (output->name &&
+./libweston/libinput-seat.c:100:			    strcmp(output->name, device->output_name) == 0)
+./libweston/libinput-seat.c:366:		    strcmp(output->name, device->output_name) == 0) {
+./libweston/compositor-drm.c:237:	return !!(sprite->possible_crtcs & (1 << output->pipe));
+./libweston/compositor-drm.c:246:		if (output->crtc_id == crtc_id)
+./libweston/compositor-drm.c:252:		if (output->crtc_id == crtc_id)
+./libweston/compositor-drm.c:265:		if (output->connector_id == connector_id)
+./libweston/compositor-drm.c:271:		if (output->connector_id == connector_id)
+./libweston/compositor-drm.c:491:            (fb != output->dumb[0] && fb != output->dumb[1])) {
+./libweston/compositor-drm.c:497:			gbm_surface_release_buffer(output->gbm_surface,
+./libweston/compositor-drm.c:516:					  output->base.width,
+./libweston/compositor-drm.c:517:					  output->base.height);
+./libweston/compositor-drm.c:526:	if (output->gbm_format == format)
+./libweston/compositor-drm.c:536:	struct drm_backend *b = to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:550:	if (ev->geometry.x != output->base.x ||
+./libweston/compositor-drm.c:551:	    ev->geometry.y != output->base.y)
+./libweston/compositor-drm.c:558:	if (buffer->width != output->base.current_mode->width ||
+./libweston/compositor-drm.c:559:	    buffer->height != output->base.current_mode->height)
+./libweston/compositor-drm.c:561:	if (viewport->buffer.transform != output->base.transform)
+./libweston/compositor-drm.c:577:	output->next = drm_fb_get_from_bo(bo, b, format);
+./libweston/compositor-drm.c:578:	if (!output->next) {
+./libweston/compositor-drm.c:583:	drm_fb_set_buffer(output->next, buffer);
+./libweston/compositor-drm.c:585:	return &output->fb_plane;
+./libweston/compositor-drm.c:591:	struct drm_backend *b = to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:594:	output->base.compositor->renderer->repaint_output(&output->base,
+./libweston/compositor-drm.c:597:	bo = gbm_surface_lock_front_buffer(output->gbm_surface);
+./libweston/compositor-drm.c:603:	output->next = drm_fb_get_from_bo(bo, b, output->gbm_format);
+./libweston/compositor-drm.c:604:	if (!output->next) {
+./libweston/compositor-drm.c:606:		gbm_surface_release_buffer(output->gbm_surface, bo);
+./libweston/compositor-drm.c:614:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-drm.c:622:	pixman_region32_union(&total_damage, damage, &output->previous_damage);
+./libweston/compositor-drm.c:623:	pixman_region32_copy(&output->previous_damage, &previous_damage);
+./libweston/compositor-drm.c:625:	output->current_image ^= 1;
+./libweston/compositor-drm.c:627:	output->next = output->dumb[output->current_image];
+./libweston/compositor-drm.c:628:	pixman_renderer_output_set_buffer(&output->base,
+./libweston/compositor-drm.c:629:					  output->image[output->current_image]);
+./libweston/compositor-drm.c:631:	ec->renderer->repaint_output(&output->base, &total_damage);
+./libweston/compositor-drm.c:640:	struct weston_compositor *c = output->base.compositor;
+./libweston/compositor-drm.c:659:		to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:664:	if (!output->original_crtc)
+./libweston/compositor-drm.c:668:				 output->crtc_id,
+./libweston/compositor-drm.c:690:	if (output->pipe > 1)
+./libweston/compositor-drm.c:691:		return (output->pipe << DRM_VBLANK_HIGH_CRTC_SHIFT) &
+./libweston/compositor-drm.c:693:	else if (output->pipe > 0)
+./libweston/compositor-drm.c:705:		to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:710:	if (output->disable_pending || output->destroy_pending)
+./libweston/compositor-drm.c:713:	if (!output->next)
+./libweston/compositor-drm.c:715:	if (!output->next)
+./libweston/compositor-drm.c:718:	mode = container_of(output->base.current_mode, struct drm_mode, base);
+./libweston/compositor-drm.c:719:	if (!output->current ||
+./libweston/compositor-drm.c:720:	    output->current->stride != output->next->stride) {
+./libweston/compositor-drm.c:721:		ret = drmModeSetCrtc(backend->drm.fd, output->crtc_id,
+./libweston/compositor-drm.c:722:				     output->next->fb_id, 0, 0,
+./libweston/compositor-drm.c:723:				     &output->connector_id, 1,
+./libweston/compositor-drm.c:732:	if (drmModePageFlip(backend->drm.fd, output->crtc_id,
+./libweston/compositor-drm.c:733:			    output->next->fb_id,
+./libweston/compositor-drm.c:739:	output->page_flip_pending = 1;
+./libweston/compositor-drm.c:761:				      output->crtc_id, fb_id, flags,
+./libweston/compositor-drm.c:784:		output->vblank_pending = 1;
+./libweston/compositor-drm.c:790:	output->cursor_view = NULL;
+./libweston/compositor-drm.c:791:	if (output->next) {
+./libweston/compositor-drm.c:792:		drm_output_release_fb(output, output->next);
+./libweston/compositor-drm.c:793:		output->next = NULL;
+./libweston/compositor-drm.c:816:	if (output->disable_pending || output->destroy_pending)
+./libweston/compositor-drm.c:819:	if (!output->current) {
+./libweston/compositor-drm.c:841:			millihz_to_nsec(output->base.current_mode->refresh);
+./libweston/compositor-drm.c:853:	fb_id = output->current->fb_id;
+./libweston/compositor-drm.c:855:	if (drmModePageFlip(backend->drm.fd, output->crtc_id, fb_id,
+./libweston/compositor-drm.c:873:	uint64_t msc_hi = output->base.msc >> 32;
+./libweston/compositor-drm.c:875:	if (seq < (output->base.msc & 0xffffffff))
+./libweston/compositor-drm.c:878:	output->base.msc = (msc_hi << 32) + seq;
+./libweston/compositor-drm.c:892:	output->vblank_pending = 0;
+./libweston/compositor-drm.c:898:	if (!output->page_flip_pending) {
+./libweston/compositor-drm.c:901:		weston_output_finish_frame(&output->base, &ts, flags);
+./libweston/compositor-drm.c:923:	if (output->page_flip_pending) {
+./libweston/compositor-drm.c:924:		drm_output_release_fb(output, output->current);
+./libweston/compositor-drm.c:925:		output->current = output->next;
+./libweston/compositor-drm.c:926:		output->next = NULL;
+./libweston/compositor-drm.c:929:	output->page_flip_pending = 0;
+./libweston/compositor-drm.c:931:	if (output->destroy_pending)
+./libweston/compositor-drm.c:932:		drm_output_destroy(&output->base);
+./libweston/compositor-drm.c:933:	else if (output->disable_pending)
+./libweston/compositor-drm.c:934:		weston_output_disable(&output->base);
+./libweston/compositor-drm.c:935:	else if (!output->vblank_pending) {
+./libweston/compositor-drm.c:938:		weston_output_finish_frame(&output->base, &ts, flags);
+./libweston/compositor-drm.c:942:		if (output->recorder)
+./libweston/compositor-drm.c:943:			weston_output_schedule_repaint(&output->base);
+./libweston/compositor-drm.c:987:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-drm.c:1004:	if (ev->output_mask != (1u << output->base.id))
+./libweston/compositor-drm.c:1017:	if (viewport->buffer.transform != output->base.transform)
+./libweston/compositor-drm.c:1019:	if (viewport->buffer.scale != output->base.current_scale)
+./libweston/compositor-drm.c:1109:				  &output->base.region);
+./libweston/compositor-drm.c:1110:	pixman_region32_translate(&dest_rect, -output->base.x, -output->base.y);
+./libweston/compositor-drm.c:1112:	tbox = weston_transformed_rect(output->base.width,
+./libweston/compositor-drm.c:1113:				       output->base.height,
+./libweston/compositor-drm.c:1114:				       output->base.transform,
+./libweston/compositor-drm.c:1115:				       output->base.current_scale,
+./libweston/compositor-drm.c:1125:				  &output->base.region);
+./libweston/compositor-drm.c:1170:	struct drm_backend *b = to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:1177:	if (output->cursor_view)
+./libweston/compositor-drm.c:1181:	if (ev->output_mask != (1u << output->base.id))
+./libweston/compositor-drm.c:1196:	if (output->base.transform != WL_OUTPUT_TRANSFORM_NORMAL)
+./libweston/compositor-drm.c:1201:	if (viewport->buffer.scale != output->base.current_scale)
+./libweston/compositor-drm.c:1210:	output->cursor_view = ev;
+./libweston/compositor-drm.c:1212:	return &output->cursor_plane;
+./libweston/compositor-drm.c:1255:	struct weston_view *ev = output->cursor_view;
+./libweston/compositor-drm.c:1257:	struct drm_backend *b = to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:1262:	output->cursor_view = NULL;
+./libweston/compositor-drm.c:1264:		drmModeSetCursor(b->drm.fd, output->crtc_id, 0, 0, 0);
+./libweston/compositor-drm.c:1265:		output->cursor_plane.x = INT32_MIN;
+./libweston/compositor-drm.c:1266:		output->cursor_plane.y = INT32_MIN;
+./libweston/compositor-drm.c:1273:	    pixman_region32_not_empty(&output->cursor_plane.damage)) {
+./libweston/compositor-drm.c:1274:		pixman_region32_fini(&output->cursor_plane.damage);
+./libweston/compositor-drm.c:1275:		pixman_region32_init(&output->cursor_plane.damage);
+./libweston/compositor-drm.c:1276:		output->current_cursor ^= 1;
+./libweston/compositor-drm.c:1277:		bo = output->gbm_cursor_bo[output->current_cursor];
+./libweston/compositor-drm.c:1281:		if (drmModeSetCursor(b->drm.fd, output->crtc_id, handle,
+./libweston/compositor-drm.c:1293:	x = (x - output->base.x) * output->base.current_scale;
+./libweston/compositor-drm.c:1294:	y = (y - output->base.y) * output->base.current_scale;
+./libweston/compositor-drm.c:1296:	if (output->cursor_plane.x != x || output->cursor_plane.y != y) {
+./libweston/compositor-drm.c:1297:		if (drmModeMoveCursor(b->drm.fd, output->crtc_id, x, y)) {
+./libweston/compositor-drm.c:1302:		output->cursor_plane.x = x;
+./libweston/compositor-drm.c:1303:		output->cursor_plane.y = y;
+./libweston/compositor-drm.c:1375:		    next_plane == &output->cursor_plane) {
+./libweston/compositor-drm.c:1406:	if (output->base.current_mode->width == target_mode->width &&
+./libweston/compositor-drm.c:1407:	    output->base.current_mode->height == target_mode->height &&
+./libweston/compositor-drm.c:1408:	    (output->base.current_mode->refresh == target_mode->refresh ||
+./libweston/compositor-drm.c:1410:		return (struct drm_mode *)output->base.current_mode;
+./libweston/compositor-drm.c:1412:	wl_list_for_each(mode, &output->base.mode_list, base.link) {
+./libweston/compositor-drm.c:1461:	if (&drm_mode->base == output->base.current_mode)
+./libweston/compositor-drm.c:1464:	output->base.current_mode->flags = 0;
+./libweston/compositor-drm.c:1466:	output->base.current_mode = &drm_mode->base;
+./libweston/compositor-drm.c:1467:	output->base.current_mode->flags =
+./libweston/compositor-drm.c:1471:	drm_output_release_fb(output, output->current);
+./libweston/compositor-drm.c:1472:	drm_output_release_fb(output, output->next);
+./libweston/compositor-drm.c:1473:	output->current = output->next = NULL;
+./libweston/compositor-drm.c:1698:	wl_list_insert(output->base.mode_list.prev, &mode->base.link);
+./libweston/compositor-drm.c:1729:	brightness = backlight_get_brightness(output->backlight);
+./libweston/compositor-drm.c:1730:	max_brightness = backlight_get_max_brightness(output->backlight);
+./libweston/compositor-drm.c:1745:	if (!output->backlight)
+./libweston/compositor-drm.c:1751:	max_brightness = backlight_get_max_brightness(output->backlight);
+./libweston/compositor-drm.c:1756:	backlight_set_brightness(output->backlight, new_brightness);
+./libweston/compositor-drm.c:1787:	if (!output->dpms_prop)
+./libweston/compositor-drm.c:1790:	ret = drmModeConnectorSetProperty(b->drm.fd, output->connector_id,
+./libweston/compositor-drm.c:1791:				 	  output->dpms_prop->prop_id, level);
+./libweston/compositor-drm.c:1794:			   output->base.name);
+./libweston/compositor-drm.c:1798:	output->dpms = level;
+./libweston/compositor-drm.c:1876:		output->gbm_format,
+./libweston/compositor-drm.c:1877:		fallback_format_for(output->gbm_format),
+./libweston/compositor-drm.c:1881:	output->gbm_surface = gbm_surface_create(b->gbm,
+./libweston/compositor-drm.c:1882:					     output->base.current_mode->width,
+./libweston/compositor-drm.c:1883:					     output->base.current_mode->height,
+./libweston/compositor-drm.c:1887:	if (!output->gbm_surface) {
+./libweston/compositor-drm.c:1894:	if (gl_renderer->output_window_create(&output->base,
+./libweston/compositor-drm.c:1895:					      (EGLNativeWindowType)output->gbm_surface,
+./libweston/compositor-drm.c:1896:					      output->gbm_surface,
+./libweston/compositor-drm.c:1901:		gbm_surface_destroy(output->gbm_surface);
+./libweston/compositor-drm.c:1908:		if (output->gbm_cursor_bo[i])
+./libweston/compositor-drm.c:1911:		output->gbm_cursor_bo[i] =
+./libweston/compositor-drm.c:1916:	if (output->gbm_cursor_bo[0] == NULL || output->gbm_cursor_bo[1] == NULL) {
+./libweston/compositor-drm.c:1927:	gl_renderer->output_destroy(&output->base);
+./libweston/compositor-drm.c:1928:	gbm_surface_destroy(output->gbm_surface);
+./libweston/compositor-drm.c:1934:	int w = output->base.current_mode->width;
+./libweston/compositor-drm.c:1935:	int h = output->base.current_mode->height;
+./libweston/compositor-drm.c:1936:	uint32_t format = output->gbm_format;
+./libweston/compositor-drm.c:1953:	for (i = 0; i < ARRAY_LENGTH(output->dumb); i++) {
+./libweston/compositor-drm.c:1954:		output->dumb[i] = drm_fb_create_dumb(b, w, h, format);
+./libweston/compositor-drm.c:1955:		if (!output->dumb[i])
+./libweston/compositor-drm.c:1958:		output->image[i] =
+./libweston/compositor-drm.c:1960:						 output->dumb[i]->map,
+./libweston/compositor-drm.c:1961:						 output->dumb[i]->stride);
+./libweston/compositor-drm.c:1962:		if (!output->image[i])
+./libweston/compositor-drm.c:1966:	if (pixman_renderer_output_create(&output->base) < 0)
+./libweston/compositor-drm.c:1969:	pixman_region32_init_rect(&output->previous_damage,
+./libweston/compositor-drm.c:1970:				  output->base.x, output->base.y, output->base.width, output->base.height);
+./libweston/compositor-drm.c:1975:	for (i = 0; i < ARRAY_LENGTH(output->dumb); i++) {
+./libweston/compositor-drm.c:1976:		if (output->dumb[i])
+./libweston/compositor-drm.c:1977:			drm_fb_destroy_dumb(output->dumb[i]);
+./libweston/compositor-drm.c:1978:		if (output->image[i])
+./libweston/compositor-drm.c:1979:			pixman_image_unref(output->image[i]);
+./libweston/compositor-drm.c:1981:		output->dumb[i] = NULL;
+./libweston/compositor-drm.c:1982:		output->image[i] = NULL;
+./libweston/compositor-drm.c:1993:	pixman_renderer_output_destroy(&output->base);
+./libweston/compositor-drm.c:1994:	pixman_region32_fini(&output->previous_damage);
+./libweston/compositor-drm.c:1996:	for (i = 0; i < ARRAY_LENGTH(output->dumb); i++) {
+./libweston/compositor-drm.c:1997:		drm_fb_destroy_dumb(output->dumb[i]);
+./libweston/compositor-drm.c:1998:		pixman_image_unref(output->image[i]);
+./libweston/compositor-drm.c:1999:		output->dumb[i] = NULL;
+./libweston/compositor-drm.c:2000:		output->image[i] = NULL;
+./libweston/compositor-drm.c:2126:	rc = edid_parse(&output->edid,
+./libweston/compositor-drm.c:2131:			   output->edid.pnp_id,
+./libweston/compositor-drm.c:2132:			   output->edid.monitor_name,
+./libweston/compositor-drm.c:2133:			   output->edid.serial_number);
+./libweston/compositor-drm.c:2134:		if (output->edid.pnp_id[0] != '\0')
+./libweston/compositor-drm.c:2135:			output->base.make = output->edid.pnp_id;
+./libweston/compositor-drm.c:2136:		if (output->edid.monitor_name[0] != '\0')
+./libweston/compositor-drm.c:2137:			output->base.model = output->edid.monitor_name;
+./libweston/compositor-drm.c:2138:		if (output->edid.serial_number[0] != '\0')
+./libweston/compositor-drm.c:2139:			output->base.serial_number = output->edid.serial_number;
+./libweston/compositor-drm.c:2279:					   modeline, output->base.name);
+./libweston/compositor-drm.c:2284:	wl_list_for_each_reverse(drm_mode, &output->base.mode_list, base.link) {
+./libweston/compositor-drm.c:2321:	weston_log("no available modes for %s\n", output->base.name);
+./libweston/compositor-drm.c:2361:	output->base.make = "unknown";
+./libweston/compositor-drm.c:2362:	output->base.model = "unknown";
+./libweston/compositor-drm.c:2363:	output->base.serial_number = "unknown";
+./libweston/compositor-drm.c:2364:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-drm.c:2366:	output->original_crtc = drmModeGetCrtc(b->drm.fd, output->crtc_id);
+./libweston/compositor-drm.c:2368:	if (connector_get_current_mode(output->connector, b->drm.fd, &crtc_mode) < 0)
+./libweston/compositor-drm.c:2371:	for (i = 0; i < output->connector->count_modes; i++) {
+./libweston/compositor-drm.c:2372:		drm_mode = drm_output_add_mode(output, &output->connector->modes[i]);
+./libweston/compositor-drm.c:2381:	output->base.current_mode = &current->base;
+./libweston/compositor-drm.c:2382:	output->base.current_mode->flags |= WL_OUTPUT_MODE_CURRENT;
+./libweston/compositor-drm.c:2385:	output->base.native_mode = output->base.current_mode;
+./libweston/compositor-drm.c:2386:	output->base.native_scale = output->base.current_scale;
+./libweston/compositor-drm.c:2388:	output->base.mm_width = output->connector->mmWidth;
+./libweston/compositor-drm.c:2389:	output->base.mm_height = output->connector->mmHeight;
+./libweston/compositor-drm.c:2394:	drmModeFreeCrtc(output->original_crtc);
+./libweston/compositor-drm.c:2395:	output->original_crtc = NULL;
+./libweston/compositor-drm.c:2397:	wl_list_for_each_safe(drm_mode, next, &output->base.mode_list,
+./libweston/compositor-drm.c:2413:	if (parse_gbm_format(gbm_format, b->gbm_format, &output->gbm_format) == -1)
+./libweston/compositor-drm.c:2414:		output->gbm_format = b->gbm_format;
+./libweston/compositor-drm.c:2424:	setup_output_seat_constraint(b, &output->base,
+./libweston/compositor-drm.c:2435:	output->dpms_prop = drm_get_prop(b->drm.fd, output->connector, "DPMS");
+./libweston/compositor-drm.c:2447:	if (output->backlight) {
+./libweston/compositor-drm.c:2449:			   output->backlight->path);
+./libweston/compositor-drm.c:2450:		output->base.set_backlight = drm_set_backlight;
+./libweston/compositor-drm.c:2451:		output->base.backlight_current = drm_get_backlight(output);
+./libweston/compositor-drm.c:2456:	output->base.start_repaint_loop = drm_output_start_repaint_loop;
+./libweston/compositor-drm.c:2457:	output->base.repaint = drm_output_repaint;
+./libweston/compositor-drm.c:2458:	output->base.assign_planes = drm_assign_planes;
+./libweston/compositor-drm.c:2459:	output->base.set_dpms = drm_set_dpms;
+./libweston/compositor-drm.c:2460:	output->base.switch_mode = drm_output_switch_mode;
+./libweston/compositor-drm.c:2462:	output->base.gamma_size = output->original_crtc->gamma_size;
+./libweston/compositor-drm.c:2463:	output->base.set_gamma = drm_output_set_gamma;
+./libweston/compositor-drm.c:2465:	output->base.subpixel = drm_subpixel_to_wayland(output->connector->subpixel);
+./libweston/compositor-drm.c:2467:	find_and_parse_output_edid(b, output, output->connector);
+./libweston/compositor-drm.c:2468:	if (output->connector->connector_type == DRM_MODE_CONNECTOR_LVDS ||
+./libweston/compositor-drm.c:2469:	    output->connector->connector_type == DRM_MODE_CONNECTOR_eDP)
+./libweston/compositor-drm.c:2470:		output->base.connection_internal = 1;
+./libweston/compositor-drm.c:2472:	weston_plane_init(&output->cursor_plane, b->compositor,
+./libweston/compositor-drm.c:2474:	weston_plane_init(&output->fb_plane, b->compositor, 0, 0);
+./libweston/compositor-drm.c:2476:	weston_compositor_stack_plane(b->compositor, &output->cursor_plane, NULL);
+./libweston/compositor-drm.c:2477:	weston_compositor_stack_plane(b->compositor, &output->fb_plane,
+./libweston/compositor-drm.c:2481:		   output->base.name, output->connector_id, output->crtc_id);
+./libweston/compositor-drm.c:2482:	wl_list_for_each(m, &output->base.mode_list, link)
+./libweston/compositor-drm.c:2489:				    output->connector->count_modes == 0 ?
+./libweston/compositor-drm.c:2495:	drmModeFreeProperty(output->dpms_prop);
+./libweston/compositor-drm.c:2511:	weston_plane_release(&output->fb_plane);
+./libweston/compositor-drm.c:2512:	weston_plane_release(&output->cursor_plane);
+./libweston/compositor-drm.c:2514:	drmModeFreeProperty(output->dpms_prop);
+./libweston/compositor-drm.c:2517:	drmModeSetCursor(b->drm.fd, output->crtc_id, 0, 0, 0);
+./libweston/compositor-drm.c:2525:	drmModeCrtcPtr origcrtc = output->original_crtc;
+./libweston/compositor-drm.c:2527:	if (output->page_flip_pending) {
+./libweston/compositor-drm.c:2528:		output->destroy_pending = 1;
+./libweston/compositor-drm.c:2533:	if (output->base.enabled)
+./libweston/compositor-drm.c:2534:		drm_output_deinit(&output->base);
+./libweston/compositor-drm.c:2540:			       &output->connector_id, 1, &origcrtc->mode);
+./libweston/compositor-drm.c:2544:	weston_output_destroy(&output->base);
+./libweston/compositor-drm.c:2546:	drmModeFreeConnector(output->connector);
+./libweston/compositor-drm.c:2548:	if (output->backlight)
+./libweston/compositor-drm.c:2549:		backlight_destroy(output->backlight);
+./libweston/compositor-drm.c:2560:	if (output->page_flip_pending) {
+./libweston/compositor-drm.c:2561:		output->disable_pending = 1;
+./libweston/compositor-drm.c:2565:	if (output->base.enabled)
+./libweston/compositor-drm.c:2566:		drm_output_deinit(&output->base);
+./libweston/compositor-drm.c:2568:	output->disable_pending = 0;
+./libweston/compositor-drm.c:2570:	weston_log("Disabling output %s\n", output->base.name);
+./libweston/compositor-drm.c:2571:	drmModeSetCrtc(b->drm.fd, output->crtc_id,
+./libweston/compositor-drm.c:2609:	output->connector = connector;
+./libweston/compositor-drm.c:2610:	output->crtc_id = resources->crtcs[i];
+./libweston/compositor-drm.c:2611:	output->pipe = i;
+./libweston/compositor-drm.c:2612:	output->connector_id = connector->connector_id;
+./libweston/compositor-drm.c:2614:	output->backlight = backlight_init(drm_device,
+./libweston/compositor-drm.c:2617:	output->base.enable = drm_output_enable;
+./libweston/compositor-drm.c:2618:	output->base.destroy = drm_output_destroy;
+./libweston/compositor-drm.c:2619:	output->base.disable = drm_output_disable;
+./libweston/compositor-drm.c:2620:	output->base.name = make_connector_name(connector);
+./libweston/compositor-drm.c:2622:	output->destroy_pending = 0;
+./libweston/compositor-drm.c:2623:	output->disable_pending = 0;
+./libweston/compositor-drm.c:2624:	output->original_crtc = NULL;
+./libweston/compositor-drm.c:2626:	weston_output_init(&output->base, b->compositor);
+./libweston/compositor-drm.c:2627:	weston_compositor_add_pending_output(&output->base, b->compositor);
+./libweston/compositor-drm.c:2692:				output->crtc_id, 0, 0,
+./libweston/compositor-drm.c:2803:			if (connected[i] == output->connector_id) {
+./libweston/compositor-drm.c:2812:		weston_log("connector %d disconnected\n", output->connector_id);
+./libweston/compositor-drm.c:2813:		drm_output_destroy(&output->base);
+./libweston/compositor-drm.c:2821:			if (connected[i] == output->connector_id) {
+./libweston/compositor-drm.c:2830:		weston_log("connector %d disconnected\n", output->connector_id);
+./libweston/compositor-drm.c:2831:		drm_output_destroy(&output->base);
+./libweston/compositor-drm.c:2928:			output->base.repaint_needed = 0;
+./libweston/compositor-drm.c:2929:			drmModeSetCursor(b->drm.fd, output->crtc_id, 0, 0, 0);
+./libweston/compositor-drm.c:2938:					output->crtc_id, 0, 0,
+./libweston/compositor-drm.c:3024:	vaapi_recorder_destroy(output->recorder);
+./libweston/compositor-drm.c:3025:	output->recorder = NULL;
+./libweston/compositor-drm.c:3027:	output->base.disable_planes--;
+./libweston/compositor-drm.c:3029:	wl_list_remove(&output->recorder_frame_listener.link);
+./libweston/compositor-drm.c:3042:	b = to_drm_backend(output->base.compositor);
+./libweston/compositor-drm.c:3044:	if (!output->recorder)
+./libweston/compositor-drm.c:3047:	ret = drmPrimeHandleToFD(b->drm.fd, output->current->handle,
+./libweston/compositor-drm.c:3055:	ret = vaapi_recorder_frame(output->recorder, fd,
+./libweston/compositor-drm.c:3056:				   output->current->stride);
+./libweston/compositor-drm.c:3091:	if (!output->recorder) {
+./libweston/compositor-drm.c:3092:		if (output->gbm_format != GBM_FORMAT_XRGB8888) {
+./libweston/compositor-drm.c:3098:		width = output->base.current_mode->width;
+./libweston/compositor-drm.c:3099:		height = output->base.current_mode->height;
+./libweston/compositor-drm.c:3101:		output->recorder =
+./libweston/compositor-drm.c:3103:		if (!output->recorder) {
+./libweston/compositor-drm.c:3108:		output->base.disable_planes++;
+./libweston/compositor-drm.c:3110:		output->recorder_frame_listener.notify = recorder_frame_notify;
+./libweston/compositor-drm.c:3111:		wl_signal_add(&output->base.frame_signal,
+./libweston/compositor-drm.c:3112:			      &output->recorder_frame_listener);
+./libweston/compositor-drm.c:3114:		weston_output_schedule_repaint(&output->base);
+./libweston/compositor-drm.c:3151:		pixman_renderer_output_destroy(&output->base);
+./libweston/gl-renderer.c:247:	return (struct gl_output_state *)output->renderer_state;
+./libweston/gl-renderer.c:675:	struct gl_renderer *gr = get_renderer(output->compositor);
+./libweston/gl-renderer.c:775:	if (ev->transform.enabled || output->zoom.active ||
+./libweston/gl-renderer.c:776:	    output->current_scale != ev->surface->buffer_viewport.buffer.scale)
+./libweston/gl-renderer.c:841:	struct weston_compositor *compositor = output->compositor;
+./libweston/gl-renderer.c:933:	struct gl_renderer *gr = get_renderer(output->compositor);
+./libweston/gl-renderer.c:947:	full_width = output->current_mode->width + left->width + right->width;
+./libweston/gl-renderer.c:948:	full_height = output->current_mode->height + top->height + bottom->height;
+./libweston/gl-renderer.c:971:					   left->width, output->current_mode->height);
+./libweston/gl-renderer.c:975:					   right->width, output->current_mode->height);
+./libweston/gl-renderer.c:999:	full_width = output->current_mode->width + left->width + right->width;
+./libweston/gl-renderer.c:1000:	full_height = output->current_mode->height + top->height + bottom->height;
+./libweston/gl-renderer.c:1008:					   left->width, output->current_mode->height);
+./libweston/gl-renderer.c:1012:					   right->width, output->current_mode->height);
+./libweston/gl-renderer.c:1024:	struct gl_renderer *gr = get_renderer(output->compositor);
+./libweston/gl-renderer.c:1039:		pixman_region32_copy(buffer_damage, &output->region);
+./libweston/gl-renderer.c:1049:			pixman_region32_copy(buffer_damage, &output->region);
+./libweston/gl-renderer.c:1065:	struct gl_renderer *gr = get_renderer(output->compositor);
+./libweston/gl-renderer.c:1090:	struct weston_compositor *compositor = output->compositor;
+./libweston/gl-renderer.c:1106:		   output->current_mode->width,
+./libweston/gl-renderer.c:1107:		   output->current_mode->height);
+./libweston/gl-renderer.c:1110:	go->output_matrix = output->matrix;
+./libweston/gl-renderer.c:1112:				-(output->current_mode->width / 2.0),
+./libweston/gl-renderer.c:1113:				-(output->current_mode->height / 2.0), 0);
+./libweston/gl-renderer.c:1115:			    2.0 / output->current_mode->width,
+./libweston/gl-renderer.c:1116:			    -2.0 / output->current_mode->height, 1);
+./libweston/gl-renderer.c:1124:		pixman_region32_subtract(&undamaged, &output->region,
+./libweston/gl-renderer.c:1148:	pixman_region32_copy(&output->previous_damage, output_damage);
+./libweston/gl-renderer.c:1149:	wl_signal_emit(&output->frame_signal, output);
+./libweston/gl-renderer.c:1153:		weston_transformed_region(output->width, output->height,
+./libweston/gl-renderer.c:1154:					  output->transform,
+./libweston/gl-renderer.c:1155:					  output->current_scale,
+./libweston/gl-renderer.c:1170:				output->current_mode->height +
+./libweston/gl-renderer.c:2718:	output->renderer_state = go;
+./libweston/gl-renderer.c:2731:	struct weston_compositor *ec = output->compositor;
+./libweston/gl-renderer.c:2756:	struct gl_renderer *gr = get_renderer(output->compositor);
+./libweston/gl-renderer.c:3026:	if (wl_list_empty(&output->compositor->output_list))
+./libweston/compositor.c:86:	pixman_region32_copy(&old_output_region, &output->region);
+./libweston/compositor.c:89:	weston_output_transform_scale_init(output, output->transform, output->current_scale);
+./libweston/compositor.c:91:	pixman_region32_init(&output->previous_damage);
+./libweston/compositor.c:92:	pixman_region32_init_rect(&output->region, output->x, output->y,
+./libweston/compositor.c:93:				  output->width, output->height);
+./libweston/compositor.c:99:	wl_list_for_each(seat, &output->compositor->seat_list, link) {
+./libweston/compositor.c:111:		    pixman_region32_contains_point(&output->region,
+./libweston/compositor.c:115:		if (x >= output->x + output->width)
+./libweston/compositor.c:116:			x = output->x + output->width - 1;
+./libweston/compositor.c:117:		if (y >= output->y + output->height)
+./libweston/compositor.c:118:			y = output->y + output->height - 1;
+./libweston/compositor.c:130:	wl_resource_for_each(resource, &output->resource_list) {
+./libweston/compositor.c:133:					    output->current_mode->flags,
+./libweston/compositor.c:134:					    output->current_mode->width,
+./libweston/compositor.c:135:					    output->current_mode->height,
+./libweston/compositor.c:136:					    output->current_mode->refresh);
+./libweston/compositor.c:141:			wl_output_send_scale(resource, output->current_scale);
+./libweston/compositor.c:162:	if (!output->switch_mode)
+./libweston/compositor.c:165:	if (!output->original_mode) {
+./libweston/compositor.c:167:		ret = output->switch_mode(output, mode);
+./libweston/compositor.c:170:		if (output->current_scale != scale) {
+./libweston/compositor.c:172:			output->current_scale = scale;
+./libweston/compositor.c:176:	old_width = output->width;
+./libweston/compositor.c:177:	output->native_mode = mode;
+./libweston/compositor.c:178:	output->native_scale = scale;
+./libweston/compositor.c:183:		weston_compositor_reflow_outputs(output->compositor, output, output->width - old_width);
+./libweston/compositor.c:185:		wl_signal_emit(&output->compositor->output_resized_signal, output);
+./libweston/compositor.c:196:	if (!output->switch_mode)
+./libweston/compositor.c:199:	if (!output->original_mode) {
+./libweston/compositor.c:207:	mode_changed = (output->original_mode != output->native_mode);
+./libweston/compositor.c:208:	scale_changed = (output->original_scale != output->native_scale);
+./libweston/compositor.c:210:	ret = output->switch_mode(output, output->native_mode);
+./libweston/compositor.c:214:	output->current_scale = output->native_scale;
+./libweston/compositor.c:216:	output->original_mode = NULL;
+./libweston/compositor.c:217:	output->original_scale = 0;
+./libweston/compositor.c:231:	if (!output->switch_mode)
+./libweston/compositor.c:237:	if (!output->original_mode) {
+./libweston/compositor.c:238:		output->original_mode = output->native_mode;
+./libweston/compositor.c:239:		output->original_scale = output->native_scale;
+./libweston/compositor.c:241:	ret = output->switch_mode(output, mode);
+./libweston/compositor.c:245:	output->current_scale = scale;
+./libweston/compositor.c:343:	wl_resource_for_each(o, &output->resource_list) {
+./libweston/compositor.c:946:		if (1u << output->id & different)
+./libweston/compositor.c:948:				wl_resource_find_for_client(&output->resource_list,
+./libweston/compositor.c:952:		if (1u << output->id & entered)
+./libweston/compositor.c:954:		if (1u << output->id & left)
+./libweston/compositor.c:988:					  &view->output->region);
+./libweston/compositor.c:1031:		if (output->destroying)
+./libweston/compositor.c:1035:					  &output->region);
+./libweston/compositor.c:1041:			mask |= 1u << output->id;
+./libweston/compositor.c:1387:		if (surface->output_mask & (1u << output->id))
+./libweston/compositor.c:1403:		if (view->output_mask & (1u << output->id))
+./libweston/compositor.c:1999:	struct weston_compositor *compositor = output->compositor;
+./libweston/compositor.c:2003:			      &output->region);
+./libweston/compositor.c:2245:		if (view->output_mask & (1u << output->id))
+./libweston/compositor.c:2252:	wl_list_insert_list(&output->feedback_list, &surface->feedback_list);
+./libweston/compositor.c:2259:	struct weston_compositor *ec = output->compositor;
+./libweston/compositor.c:2267:	if (output->destroying)
+./libweston/compositor.c:2275:	if (output->assign_planes && !output->disable_planes) {
+./libweston/compositor.c:2276:		output->assign_planes(output);
+./libweston/compositor.c:2302:				  &ec->primary_plane.damage, &output->region);
+./libweston/compositor.c:2306:	if (output->dirty)
+./libweston/compositor.c:2309:	r = output->repaint(output, &output_damage);
+./libweston/compositor.c:2313:	output->repaint_needed = 0;
+./libweston/compositor.c:2318:		wl_callback_send_done(cb->resource, output->frame_time);
+./libweston/compositor.c:2322:	wl_list_for_each_safe(animation, next, &output->animation_list, link) {
+./libweston/compositor.c:2324:		animation->frame(animation, output, output->frame_time);
+./libweston/compositor.c:2335:	output->repaint_scheduled = 0;
+./libweston/compositor.c:2343:	struct weston_compositor *compositor = output->compositor;
+./libweston/compositor.c:2354:	if (!output->repaint_needed)
+./libweston/compositor.c:2376:	struct weston_compositor *compositor = output->compositor;
+./libweston/compositor.c:2385:	refresh_nsec = millihz_to_nsec(output->current_mode->refresh);
+./libweston/compositor.c:2386:	weston_presentation_feedback_present_list(&output->feedback_list,
+./libweston/compositor.c:2388:						  output->msc,
+./libweston/compositor.c:2391:	output->frame_time = stamp->tv_sec * 1000 + stamp->tv_nsec / 1000000;
+./libweston/compositor.c:2419:		wl_event_source_timer_update(output->repaint_timer, msec);
+./libweston/compositor.c:2427:	output->start_repaint_loop(output);
+./libweston/compositor.c:2530:	struct weston_compositor *compositor = output->compositor;
+./libweston/compositor.c:2537:	if (!output->repaint_needed)
+./libweston/compositor.c:2541:	output->repaint_needed = 1;
+./libweston/compositor.c:2542:	if (output->repaint_scheduled)
+./libweston/compositor.c:2546:	output->repaint_scheduled = 1;
+./libweston/compositor.c:4003:		if (output->set_dpms)
+./libweston/compositor.c:4004:			output->set_dpms(output, state);
+./libweston/compositor.c:4184:	wl_list_insert(&output->resource_list, wl_resource_get_link(resource));
+./libweston/compositor.c:4188:				output->x,
+./libweston/compositor.c:4189:				output->y,
+./libweston/compositor.c:4190:				output->mm_width,
+./libweston/compositor.c:4191:				output->mm_height,
+./libweston/compositor.c:4192:				output->subpixel,
+./libweston/compositor.c:4193:				output->make, output->model,
+./libweston/compositor.c:4194:				output->transform);
+./libweston/compositor.c:4197:				     output->current_scale);
+./libweston/compositor.c:4199:	wl_list_for_each (mode, &output->mode_list, link) {
+./libweston/compositor.c:4229:			weston_output_move(output, output->x + delta_width, output->y);
+./libweston/compositor.c:4230:			output->dirty = 1;
+./libweston/compositor.c:4240:	weston_matrix_init(&output->matrix);
+./libweston/compositor.c:4241:	weston_matrix_translate(&output->matrix, -output->x, -output->y, 0);
+./libweston/compositor.c:4243:	if (output->zoom.active) {
+./libweston/compositor.c:4244:		magnification = 1 / (1 - output->zoom.spring_z.current);
+./libweston/compositor.c:4246:		weston_matrix_translate(&output->matrix, -output->zoom.trans_x,
+./libweston/compositor.c:4247:					-output->zoom.trans_y, 0);
+./libweston/compositor.c:4248:		weston_matrix_scale(&output->matrix, magnification,
+./libweston/compositor.c:4252:	switch (output->transform) {
+./libweston/compositor.c:4257:		weston_matrix_translate(&output->matrix, -output->width, 0, 0);
+./libweston/compositor.c:4258:		weston_matrix_scale(&output->matrix, -1, 1, 1);
+./libweston/compositor.c:4262:	switch (output->transform) {
+./libweston/compositor.c:4269:		weston_matrix_translate(&output->matrix, 0, -output->height, 0);
+./libweston/compositor.c:4270:		weston_matrix_rotate_xy(&output->matrix, 0, 1);
+./libweston/compositor.c:4274:		weston_matrix_translate(&output->matrix,
+./libweston/compositor.c:4275:					-output->width, -output->height, 0);
+./libweston/compositor.c:4276:		weston_matrix_rotate_xy(&output->matrix, -1, 0);
+./libweston/compositor.c:4280:		weston_matrix_translate(&output->matrix, -output->width, 0, 0);
+./libweston/compositor.c:4281:		weston_matrix_rotate_xy(&output->matrix, 0, -1);
+./libweston/compositor.c:4285:	if (output->current_scale != 1)
+./libweston/compositor.c:4286:		weston_matrix_scale(&output->matrix,
+./libweston/compositor.c:4287:				    output->current_scale,
+./libweston/compositor.c:4288:				    output->current_scale, 1);
+./libweston/compositor.c:4290:	output->dirty = 0;
+./libweston/compositor.c:4292:	weston_matrix_invert(&output->inverse_matrix, &output->matrix);
+./libweston/compositor.c:4298:	output->transform = transform;
+./libweston/compositor.c:4299:	output->native_scale = scale;
+./libweston/compositor.c:4300:	output->current_scale = scale;
+./libweston/compositor.c:4302:	convert_size_by_transform_scale(&output->width, &output->height,
+./libweston/compositor.c:4303:					output->current_mode->width,
+./libweston/compositor.c:4304:					output->current_mode->height,
+./libweston/compositor.c:4311:	output->x = x;
+./libweston/compositor.c:4312:	output->y = y;
+./libweston/compositor.c:4314:	pixman_region32_init(&output->previous_damage);
+./libweston/compositor.c:4315:	pixman_region32_init_rect(&output->region, x, y,
+./libweston/compositor.c:4316:				  output->width,
+./libweston/compositor.c:4317:				  output->height);
+./libweston/compositor.c:4325:	output->move_x = x - output->x;
+./libweston/compositor.c:4326:	output->move_y = y - output->y;
+./libweston/compositor.c:4328:	if (output->move_x == 0 && output->move_y == 0)
+./libweston/compositor.c:4333:	output->dirty = 1;
+./libweston/compositor.c:4336:	wl_signal_emit(&output->compositor->output_moved_signal, output);
+./libweston/compositor.c:4339:	wl_resource_for_each(resource, &output->resource_list) {
+./libweston/compositor.c:4341:					output->x,
+./libweston/compositor.c:4342:					output->y,
+./libweston/compositor.c:4343:					output->mm_width,
+./libweston/compositor.c:4344:					output->mm_height,
+./libweston/compositor.c:4345:					output->subpixel,
+./libweston/compositor.c:4346:					output->make,
+./libweston/compositor.c:4347:					output->model,
+./libweston/compositor.c:4348:					output->transform);
+./libweston/compositor.c:4367:	wl_list_insert(compositor->output_list.prev, &output->link);
+./libweston/compositor.c:4385:	weston_matrix_transform(&output->inverse_matrix, &p);
+./libweston/compositor.c:4403:	wl_event_source_remove(output->repaint_timer);
+./libweston/compositor.c:4405:	wl_global_destroy(output->global);
+./libweston/compositor.c:4407:	pixman_region32_fini(&output->region);
+./libweston/compositor.c:4408:	pixman_region32_fini(&output->previous_damage);
+./libweston/compositor.c:4409:	output->compositor->output_id_pool &= ~(1u << output->id);
+./libweston/compositor.c:4411:	output->enabled = false;
+./libweston/compositor.c:4434:	assert(output->destroying);
+./libweston/compositor.c:4436:	wl_list_for_each(view, &output->compositor->view_list, link) {
+./libweston/compositor.c:4437:		if (view->output_mask & (1u << output->id))
+./libweston/compositor.c:4441:	weston_presentation_feedback_discard_list(&output->feedback_list);
+./libweston/compositor.c:4443:	weston_compositor_reflow_outputs(output->compositor, output, output->width);
+./libweston/compositor.c:4444:	wl_list_remove(&output->link);
+./libweston/compositor.c:4446:	wl_signal_emit(&output->compositor->output_destroyed_signal, output);
+./libweston/compositor.c:4447:	wl_signal_emit(&output->destroy_signal, output);
+./libweston/compositor.c:4449:	wl_resource_for_each(resource, &output->resource_list) {
+./libweston/compositor.c:4467:	assert(!output->enabled);
+./libweston/compositor.c:4470:	assert(!output->scale);
+./libweston/compositor.c:4472:	output->scale = scale;
+./libweston/compositor.c:4492:	assert(!output->enabled);
+./libweston/compositor.c:4495:	assert(output->transform == UINT32_MAX);
+./libweston/compositor.c:4497:	output->transform = transform;
+./libweston/compositor.c:4513:	output->compositor = compositor;
+./libweston/compositor.c:4514:	output->destroying = 0;
+./libweston/compositor.c:4516:	/* Backends must set output->name */
+./libweston/compositor.c:4517:	assert(output->name);
+./libweston/compositor.c:4519:	wl_list_init(&output->link);
+./libweston/compositor.c:4521:	output->enabled = false;
+./libweston/compositor.c:4526:	output->mm_width = 0;
+./libweston/compositor.c:4527:	output->mm_height = 0;
+./libweston/compositor.c:4528:	output->scale = 0;
+./libweston/compositor.c:4530:	output->transform = UINT32_MAX;
+./libweston/compositor.c:4545:	wl_list_insert(compositor->pending_output_list.prev, &output->link);
+./libweston/compositor.c:4584:	struct weston_compositor *c = output->compositor;
+./libweston/compositor.c:4589:	assert(output->enable);
+./libweston/compositor.c:4598:	assert(output->scale);
+./libweston/compositor.c:4601:	assert(output->transform != UINT32_MAX);
+./libweston/compositor.c:4604:	wl_list_remove(&output->link);
+./libweston/compositor.c:4609:	output->x = x;
+./libweston/compositor.c:4610:	output->y = y;
+./libweston/compositor.c:4611:	output->dirty = 1;
+./libweston/compositor.c:4612:	output->original_scale = output->scale;
+./libweston/compositor.c:4614:	weston_output_transform_scale_init(output, output->transform, output->scale);
+./libweston/compositor.c:4620:	wl_signal_init(&output->frame_signal);
+./libweston/compositor.c:4621:	wl_signal_init(&output->destroy_signal);
+./libweston/compositor.c:4622:	wl_list_init(&output->animation_list);
+./libweston/compositor.c:4623:	wl_list_init(&output->resource_list);
+./libweston/compositor.c:4624:	wl_list_init(&output->feedback_list);
+./libweston/compositor.c:4625:	wl_list_init(&output->link);
+./libweston/compositor.c:4628:	output->repaint_timer = wl_event_loop_add_timer(loop,
+./libweston/compositor.c:4635:	output->id = ffs(~output->compositor->output_id_pool) - 1;
+./libweston/compositor.c:4636:	output->compositor->output_id_pool |= 1u << output->id;
+./libweston/compositor.c:4638:	output->global =
+./libweston/compositor.c:4642:	output->enabled = true;
+./libweston/compositor.c:4648:	if (output->enable(output) < 0) {
+./libweston/compositor.c:4649:		weston_log("Enabling output \"%s\" failed.\n", output->name);
+./libweston/compositor.c:4652:		wl_list_insert(output->compositor->pending_output_list.prev,
+./libweston/compositor.c:4653:			       &output->link);
+./libweston/compositor.c:4657:	weston_compositor_add_output(output->compositor, output);
+./libweston/compositor.c:4693:	assert(output->disable);
+./libweston/compositor.c:4696:	output->destroying = 1;
+./libweston/compositor.c:4698:	if (output->disable(output) < 0)
+./libweston/compositor.c:4701:	if (output->enabled) {
+./libweston/compositor.c:4707:		wl_list_insert(output->compositor->pending_output_list.prev, &output->link);
+./libweston/compositor.c:4710:	output->destroying = 0;
+./libweston/compositor.c:4729:	output->destroying = 1;
+./libweston/compositor.c:4731:	if (output->enabled) {
+./libweston/compositor.c:4736:	free(output->name);
+./libweston/compositor.c:5159:		output->destroy(output);
+./libweston/compositor.c:5163:		output->destroy(output);
+./libweston/compositor-x11.c:63:#include "windowed-output-api.h"
+./libweston/compositor-x11.c:386:	weston_compositor_read_presentation_clock(output->compositor, &ts);
+./libweston/compositor-x11.c:395:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-x11.c:402:	wl_event_source_timer_update(output->finish_frame_timer, 10);
+./libweston/compositor-x11.c:410:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-x11.c:446:					output->gc,
+./libweston/compositor-x11.c:463:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-x11.c:468:	pixman_renderer_output_set_buffer(output_base, output->hw_surface);
+./libweston/compositor-x11.c:474:	cookie = xcb_shm_put_image_checked(b->conn, output->window, output->gc,
+./libweston/compositor-x11.c:475:					pixman_image_get_width(output->hw_surface),
+./libweston/compositor-x11.c:476:					pixman_image_get_height(output->hw_surface),
+./libweston/compositor-x11.c:478:					pixman_image_get_width(output->hw_surface),
+./libweston/compositor-x11.c:479:					pixman_image_get_height(output->hw_surface),
+./libweston/compositor-x11.c:480:					0, 0, output->depth, XCB_IMAGE_FORMAT_Z_PIXMAP,
+./libweston/compositor-x11.c:481:					0, output->segment, 0);
+./libweston/compositor-x11.c:488:	wl_event_source_timer_update(output->finish_frame_timer, 10);
+./libweston/compositor-x11.c:498:	weston_compositor_read_presentation_clock(output->base.compositor, &ts);
+./libweston/compositor-x11.c:499:	weston_output_finish_frame(&output->base, &ts, 0);
+./libweston/compositor-x11.c:509:	xcb_free_gc(b->conn, output->gc);
+./libweston/compositor-x11.c:511:	pixman_image_unref(output->hw_surface);
+./libweston/compositor-x11.c:512:	output->hw_surface = NULL;
+./libweston/compositor-x11.c:513:	cookie = xcb_shm_detach_checked(b->conn, output->segment);
+./libweston/compositor-x11.c:519:	shmdt(output->buf);
+./libweston/compositor-x11.c:531:			     output->window,
+./libweston/compositor-x11.c:576:	xcb_change_property(b->conn, XCB_PROP_MODE_REPLACE, output->window,
+./libweston/compositor-x11.c:614:			if (map_notify->window == output->window)
+./libweston/compositor-x11.c:623:			if (configure_notify->width % output->scale != 0 ||
+./libweston/compositor-x11.c:624:			    configure_notify->height % output->scale != 0)
+./libweston/compositor-x11.c:626:			output->mode.width = configure_notify->width;
+./libweston/compositor-x11.c:627:			output->mode.height = configure_notify->height;
+./libweston/compositor-x11.c:706:	output->depth = get_depth_of_visual(screen, screen->root_visual);
+./libweston/compositor-x11.c:707:	weston_log("Visual depth is %d\n", output->depth);
+./libweston/compositor-x11.c:712:		if (fmt.data->depth == output->depth) {
+./libweston/compositor-x11.c:718:		output->depth, bitsperpixel);
+./libweston/compositor-x11.c:740:	output->shm_id = shmget(IPC_PRIVATE, width * height * (bitsperpixel / 8), IPC_CREAT | S_IRWXU);
+./libweston/compositor-x11.c:741:	if (output->shm_id == -1) {
+./libweston/compositor-x11.c:745:	output->buf = shmat(output->shm_id, NULL, 0 /* read/write */);
+./libweston/compositor-x11.c:746:	if (-1 == (long)output->buf) {
+./libweston/compositor-x11.c:750:	output->segment = xcb_generate_id(b->conn);
+./libweston/compositor-x11.c:751:	cookie = xcb_shm_attach_checked(b->conn, output->segment, output->shm_id, 1);
+./libweston/compositor-x11.c:760:	shmctl(output->shm_id, IPC_RMID, NULL);
+./libweston/compositor-x11.c:763:	output->hw_surface = pixman_image_create_bits(pixman_format, width, height, output->buf,
+./libweston/compositor-x11.c:766:	output->gc = xcb_generate_id(b->conn);
+./libweston/compositor-x11.c:767:	xcb_create_gc(b->conn, output->gc, output->window, 0, NULL);
+./libweston/compositor-x11.c:778:	if (!output->base.enabled)
+./libweston/compositor-x11.c:781:	wl_event_source_remove(output->finish_frame_timer);
+./libweston/compositor-x11.c:784:		pixman_renderer_output_destroy(&output->base);
+./libweston/compositor-x11.c:787:		gl_renderer->output_destroy(&output->base);
+./libweston/compositor-x11.c:790:	xcb_destroy_window(backend->conn, output->window);
+./libweston/compositor-x11.c:801:	x11_output_disable(&output->base);
+./libweston/compositor-x11.c:802:	weston_output_destroy(&output->base);
+./libweston/compositor-x11.c:842:	output->window = xcb_generate_id(b->conn);
+./libweston/compositor-x11.c:846:			  output->window,
+./libweston/compositor-x11.c:849:			  output->base.current_mode->width,
+./libweston/compositor-x11.c:850:			  output->base.current_mode->height,
+./libweston/compositor-x11.c:859:				    output->window,
+./libweston/compositor-x11.c:868:		normal_hints.min_width = output->base.current_mode->width;
+./libweston/compositor-x11.c:869:		normal_hints.min_height = output->base.current_mode->height;
+./libweston/compositor-x11.c:870:		normal_hints.max_width = output->base.current_mode->width;
+./libweston/compositor-x11.c:871:		normal_hints.max_height = output->base.current_mode->height;
+./libweston/compositor-x11.c:872:		xcb_change_property(b->conn, XCB_PROP_MODE_REPLACE, output->window,
+./libweston/compositor-x11.c:880:	if (output->base.name) {
+./libweston/compositor-x11.c:881:		if (asprintf(&title, "%s - %s", name, output->base.name) < 0)
+./libweston/compositor-x11.c:888:		xcb_change_property(b->conn, XCB_PROP_MODE_REPLACE, output->window,
+./libweston/compositor-x11.c:896:	xcb_change_property(b->conn, XCB_PROP_MODE_REPLACE, output->window,
+./libweston/compositor-x11.c:904:	xcb_map_window(b->conn, output->window);
+./libweston/compositor-x11.c:911:					output->base.current_mode->width,
+./libweston/compositor-x11.c:912:					output->base.current_mode->height) < 0) {
+./libweston/compositor-x11.c:916:		if (pixman_renderer_output_create(&output->base) < 0) {
+./libweston/compositor-x11.c:922:		output->base.repaint = x11_output_repaint_shm;
+./libweston/compositor-x11.c:926:		Window xid = (Window) output->window;
+./libweston/compositor-x11.c:929:					&output->base,
+./libweston/compositor-x11.c:930:					(EGLNativeWindowType) output->window,
+./libweston/compositor-x11.c:938:		output->base.repaint = x11_output_repaint_gl;
+./libweston/compositor-x11.c:941:	output->base.start_repaint_loop = x11_output_start_repaint_loop;
+./libweston/compositor-x11.c:942:	output->base.assign_planes = NULL;
+./libweston/compositor-x11.c:943:	output->base.set_backlight = NULL;
+./libweston/compositor-x11.c:944:	output->base.set_dpms = NULL;
+./libweston/compositor-x11.c:945:	output->base.switch_mode = NULL;
+./libweston/compositor-x11.c:948:	output->finish_frame_timer =
+./libweston/compositor-x11.c:952:		   output->base.current_mode->width,
+./libweston/compositor-x11.c:953:		   output->base.current_mode->height,
+./libweston/compositor-x11.c:954:		   output->window);
+./libweston/compositor-x11.c:959:	xcb_destroy_window(b->conn, output->window);
+./libweston/compositor-x11.c:973:	assert(!output->base.current_mode);
+./libweston/compositor-x11.c:976:	assert(output->base.scale);
+./libweston/compositor-x11.c:980:			   width, output->base.name);
+./libweston/compositor-x11.c:986:			   height, output->base.name);
+./libweston/compositor-x11.c:990:	output_width = width * output->base.scale;
+./libweston/compositor-x11.c:991:	output_height = height * output->base.scale;
+./libweston/compositor-x11.c:993:	output->mode.flags =
+./libweston/compositor-x11.c:996:	output->mode.width = output_width;
+./libweston/compositor-x11.c:997:	output->mode.height = output_height;
+./libweston/compositor-x11.c:998:	output->mode.refresh = 60000;
+./libweston/compositor-x11.c:999:	output->scale = output->base.scale;
+./libweston/compositor-x11.c:1000:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-x11.c:1001:	wl_list_insert(&output->base.mode_list, &output->mode.link);
+./libweston/compositor-x11.c:1003:	output->base.current_mode = &output->mode;
+./libweston/compositor-x11.c:1004:	output->base.make = "weston-X11";
+./libweston/compositor-x11.c:1005:	output->base.model = "none";
+./libweston/compositor-x11.c:1007:	output->base.mm_width = width * b->screen->width_in_millimeters /
+./libweston/compositor-x11.c:1009:	output->base.mm_height = height * b->screen->height_in_millimeters /
+./libweston/compositor-x11.c:1030:	output->base.name = strdup(name);
+./libweston/compositor-x11.c:1031:	output->base.destroy = x11_output_destroy;
+./libweston/compositor-x11.c:1032:	output->base.disable = x11_output_disable;
+./libweston/compositor-x11.c:1033:	output->base.enable = x11_output_enable;
+./libweston/compositor-x11.c:1035:	weston_output_init(&output->base, compositor);
+./libweston/compositor-x11.c:1036:	weston_compositor_add_pending_output(&output->base, compositor);
+./libweston/compositor-x11.c:1047:		if (output->window == window)
+./libweston/compositor-x11.c:1061:		x11_output_destroy(&output->base);
+./libweston/compositor-x11.c:1143:		xcb_grab_pointer(b->conn, 0, output->window,
+./libweston/compositor-x11.c:1151:				 output->window, XCB_CURSOR_NONE,
+./libweston/compositor-x11.c:1251:	weston_output_transform_coordinate(&output->base,
+./libweston/compositor-x11.c:1287:	weston_output_transform_coordinate(&output->base,
+./libweston/compositor-x11.c:1291:	notify_pointer_focus(&b->core_seat, &output->base, x, y);
+./libweston/compositor-x11.c:1432:			weston_output_damage(&output->base);
+./libweston/compositor-x11.c:1433:			weston_output_schedule_repaint(&output->base);
+./libweston/compositor-fbdev.c:116:	weston_compositor_read_presentation_clock(output->compositor, &ts);
+./libweston/compositor-fbdev.c:124:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-fbdev.c:127:	pixman_renderer_output_set_buffer(base, output->hw_surface);
+./libweston/compositor-fbdev.c:141:	wl_event_source_timer_update(output->finish_frame_timer,
+./libweston/compositor-fbdev.c:142:	                             1000000 / output->mode.refresh);
+./libweston/compositor-fbdev.c:153:	weston_compositor_read_presentation_clock(output->base.compositor, &ts);
+./libweston/compositor-fbdev.c:154:	weston_output_finish_frame(&output->base, &ts, 0);
+./libweston/compositor-fbdev.c:379:	output->fb = mmap(NULL, output->fb_info.buffer_length,
+./libweston/compositor-fbdev.c:381:	if (output->fb == MAP_FAILED) {
+./libweston/compositor-fbdev.c:388:	output->hw_surface =
+./libweston/compositor-fbdev.c:389:		pixman_image_create_bits(output->fb_info.pixel_format,
+./libweston/compositor-fbdev.c:390:		                         output->fb_info.x_resolution,
+./libweston/compositor-fbdev.c:391:		                         output->fb_info.y_resolution,
+./libweston/compositor-fbdev.c:392:		                         output->fb,
+./libweston/compositor-fbdev.c:393:		                         output->fb_info.line_length);
+./libweston/compositor-fbdev.c:394:	if (output->hw_surface == NULL) {
+./libweston/compositor-fbdev.c:403:	if (retval != 0 && output->fb != NULL)
+./libweston/compositor-fbdev.c:418:	if (munmap(output->fb, output->fb_info.buffer_length) < 0)
+./libweston/compositor-fbdev.c:422:	output->fb = NULL;
+./libweston/compositor-fbdev.c:437:	fb_fd = fbdev_frame_buffer_open(output, output->device, &output->fb_info);
+./libweston/compositor-fbdev.c:448:	output->base.start_repaint_loop = fbdev_output_start_repaint_loop;
+./libweston/compositor-fbdev.c:449:	output->base.repaint = fbdev_output_repaint;
+./libweston/compositor-fbdev.c:451:	if (pixman_renderer_output_create(&output->base) < 0)
+./libweston/compositor-fbdev.c:455:	output->finish_frame_timer =
+./libweston/compositor-fbdev.c:459:	           output->mode.width, output->mode.height);
+./libweston/compositor-fbdev.c:461:	                    output->mode.refresh / 1000);
+./libweston/compositor-fbdev.c:466:	pixman_image_unref(output->hw_surface);
+./libweston/compositor-fbdev.c:467:	output->hw_surface = NULL;
+./libweston/compositor-fbdev.c:486:	output->backend = backend;
+./libweston/compositor-fbdev.c:487:	output->device = strdup(device);
+./libweston/compositor-fbdev.c:490:	fb_fd = fbdev_frame_buffer_open(output, device, &output->fb_info);
+./libweston/compositor-fbdev.c:496:	output->base.name = strdup("fbdev");
+./libweston/compositor-fbdev.c:497:	output->base.destroy = fbdev_output_destroy;
+./libweston/compositor-fbdev.c:498:	output->base.disable = NULL;
+./libweston/compositor-fbdev.c:499:	output->base.enable = fbdev_output_enable;
+./libweston/compositor-fbdev.c:501:	weston_output_init(&output->base, backend->compositor);
+./libweston/compositor-fbdev.c:504:	output->mode.flags =
+./libweston/compositor-fbdev.c:506:	output->mode.width = output->fb_info.x_resolution;
+./libweston/compositor-fbdev.c:507:	output->mode.height = output->fb_info.y_resolution;
+./libweston/compositor-fbdev.c:508:	output->mode.refresh = output->fb_info.refresh_rate;
+./libweston/compositor-fbdev.c:509:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-fbdev.c:510:	wl_list_insert(&output->base.mode_list, &output->mode.link);
+./libweston/compositor-fbdev.c:512:	output->base.current_mode = &output->mode;
+./libweston/compositor-fbdev.c:513:	output->base.subpixel = WL_OUTPUT_SUBPIXEL_UNKNOWN;
+./libweston/compositor-fbdev.c:514:	output->base.make = "unknown";
+./libweston/compositor-fbdev.c:515:	output->base.model = output->fb_info.id;
+./libweston/compositor-fbdev.c:517:	output->base.mm_width = output->fb_info.width_mm;
+./libweston/compositor-fbdev.c:518:	output->base.mm_height = output->fb_info.height_mm;
+./libweston/compositor-fbdev.c:522:	weston_compositor_add_pending_output(&output->base, backend->compositor);
+./libweston/compositor-fbdev.c:527:	free(output->device);
+./libweston/compositor-fbdev.c:547:	weston_output_destroy(&output->base);
+./libweston/compositor-fbdev.c:549:	free(output->device);
+./libweston/compositor-fbdev.c:582:	fb_fd = fbdev_frame_buffer_open(output, output->device,
+./libweston/compositor-fbdev.c:591:	if (compare_screen_info (&output->fb_info, &new_screen_info) != 0) {
+./libweston/compositor-fbdev.c:594:		                          &output->fb_info) < 0) {
+./libweston/compositor-fbdev.c:604:		device = strdup(output->device);
+./libweston/compositor-fbdev.c:605:		fbdev_output_destroy(&output->base);
+./libweston/compositor-fbdev.c:624:/* NOTE: This leaves output->fb_info populated, caching data so that if
+./libweston/compositor-fbdev.c:634:	if (output->hw_surface != NULL) {
+./libweston/compositor-fbdev.c:635:		pixman_image_unref(output->hw_surface);
+./libweston/compositor-fbdev.c:636:		output->hw_surface = NULL;
+./libweston/compositor-fbdev.c:696:			output->repaint_needed = 0;
+./libweston/compositor-rdp.c:341:		rdp_peer_refresh_rfx(region, output->shadow_surface, peer);
+./libweston/compositor-rdp.c:343:		rdp_peer_refresh_nsc(region, output->shadow_surface, peer);
+./libweston/compositor-rdp.c:345:		rdp_peer_refresh_raw(region, output->shadow_surface, peer);
+./libweston/compositor-rdp.c:353:	weston_compositor_read_presentation_clock(output->compositor, &ts);
+./libweston/compositor-rdp.c:361:	struct weston_compositor *ec = output->base.compositor;
+./libweston/compositor-rdp.c:364:	pixman_renderer_output_set_buffer(output_base, output->shadow_surface);
+./libweston/compositor-rdp.c:365:	ec->renderer->repaint_output(&output->base, damage);
+./libweston/compositor-rdp.c:368:		wl_list_for_each(outputPeer, &output->peers, link) {
+./libweston/compositor-rdp.c:380:	wl_event_source_timer_update(output->finish_frame_timer, 16);
+./libweston/compositor-rdp.c:390:	weston_compositor_read_presentation_clock(output->base.compositor, &ts);
+./libweston/compositor-rdp.c:391:	weston_output_finish_frame(&output->base, &ts, 0);
+./libweston/compositor-rdp.c:406:	wl_list_insert(&output->mode_list, &ret->link);
+./libweston/compositor-rdp.c:415:	wl_list_for_each(local, &output->mode_list, link) {
+./libweston/compositor-rdp.c:438:	if (local_mode == output->current_mode)
+./libweston/compositor-rdp.c:441:	output->current_mode->flags &= ~WL_OUTPUT_MODE_CURRENT;
+./libweston/compositor-rdp.c:443:	output->current_mode = local_mode;
+./libweston/compositor-rdp.c:444:	output->current_mode->flags |= WL_OUTPUT_MODE_CURRENT;
+./libweston/compositor-rdp.c:483:	assert(!output->base.current_mode);
+./libweston/compositor-rdp.c:485:	wl_list_init(&output->peers);
+./libweston/compositor-rdp.c:486:	wl_list_init(&output->base.mode_list);
+./libweston/compositor-rdp.c:493:	currentMode = ensure_matching_mode(&output->base, &initMode);
+./libweston/compositor-rdp.c:497:	output->base.current_mode = output->base.native_mode = currentMode;
+./libweston/compositor-rdp.c:498:	output->base.make = "weston";
+./libweston/compositor-rdp.c:499:	output->base.model = "rdp";
+./libweston/compositor-rdp.c:502:	output->base.mm_width = width;
+./libweston/compositor-rdp.c:503:	output->base.mm_height = height;
+./libweston/compositor-rdp.c:505:	output->base.start_repaint_loop = rdp_output_start_repaint_loop;
+./libweston/compositor-rdp.c:506:	output->base.repaint = rdp_output_repaint;
+./libweston/compositor-rdp.c:507:	output->base.assign_planes = NULL;
+./libweston/compositor-rdp.c:508:	output->base.set_backlight = NULL;
+./libweston/compositor-rdp.c:509:	output->base.set_dpms = NULL;
+./libweston/compositor-rdp.c:510:	output->base.switch_mode = rdp_switch_mode;
+./libweston/compositor-rdp.c:522:	output->shadow_surface = pixman_image_create_bits(PIXMAN_x8r8g8b8,
+./libweston/compositor-rdp.c:523:							  output->base.current_mode->width,
+./libweston/compositor-rdp.c:524:							  output->base.current_mode->height,
+./libweston/compositor-rdp.c:526:							  output->base.current_mode->width * 4);
+./libweston/compositor-rdp.c:527:	if (output->shadow_surface == NULL) {
+./libweston/compositor-rdp.c:532:	if (pixman_renderer_output_create(&output->base) < 0) {
+./libweston/compositor-rdp.c:533:		pixman_image_unref(output->shadow_surface);
+./libweston/compositor-rdp.c:538:	output->finish_frame_timer = wl_event_loop_add_timer(loop, finish_frame_handler, output);
+./libweston/compositor-rdp.c:551:	if (!output->base.enabled)
+./libweston/compositor-rdp.c:554:	pixman_image_unref(output->shadow_surface);
+./libweston/compositor-rdp.c:555:	pixman_renderer_output_destroy(&output->base);
+./libweston/compositor-rdp.c:557:	wl_event_source_remove(output->finish_frame_timer);
+./libweston/compositor-rdp.c:568:	rdp_output_disable(&output->base);
+./libweston/compositor-rdp.c:569:	weston_output_destroy(&output->base);
+./libweston/compositor-rdp.c:583:	output->base.name =  strdup("rdp");
+./libweston/compositor-rdp.c:584:	output->base.destroy = rdp_output_destroy;
+./libweston/compositor-rdp.c:585:	output->base.disable = rdp_output_disable;
+./libweston/compositor-rdp.c:586:	output->base.enable = rdp_output_enable;
+./libweston/compositor-rdp.c:588:	weston_output_init(&output->base, compositor);
+./libweston/compositor-rdp.c:589:	weston_compositor_add_pending_output(&output->base, compositor);
+./libweston/compositor-rdp.c:911:	if (output->base.width != (int)settings->DesktopWidth ||
+./libweston/compositor-rdp.c:912:			output->base.height != (int)settings->DesktopHeight)
+./libweston/compositor-rdp.c:921:				settings->DesktopWidth = output->base.width;
+./libweston/compositor-rdp.c:922:				settings->DesktopHeight = output->base.height;
+./libweston/compositor-rdp.c:931:			target_mode = ensure_matching_mode(&output->base, &new_mode);
+./libweston/compositor-rdp.c:936:			weston_output_mode_set_native(&output->base, target_mode, 1);
+./libweston/compositor-rdp.c:937:			output->base.width = new_mode.width;
+./libweston/compositor-rdp.c:938:			output->base.height = new_mode.height;
+./libweston/compositor-rdp.c:942:	weston_output = &output->base;
+./libweston/compositor-rdp.c:943:	RFX_RESET(peerCtx->rfx_context, weston_output->width, weston_output->height);
+./libweston/compositor-rdp.c:944:	NSC_RESET(peerCtx->nsc_context, weston_output->width, weston_output->height);
+./libweston/compositor-rdp.c:1004:	box.x2 = output->base.width;
+./libweston/compositor-rdp.c:1005:	box.y2 = output->base.height;
+./libweston/compositor-rdp.c:1030:		if (x < output->base.width && y < output->base.height) {
+./libweston/compositor-rdp.c:1088:	if (x < output->base.width && y < output->base.height) {
+./libweston/compositor-rdp.c:1109:	box.x2 = output->base.width;
+./libweston/compositor-rdp.c:1110:	box.y2 = output->base.height;
+./libweston/compositor-rdp.c:1253:	wl_list_insert(&b->output->peers, &peerCtx->item.link);
+./libweston/compositor-rdp.c:1358:	weston_output_destroy(&b->output->base);
+Binary file ./libweston/.libs/wayland_backend_la-compositor-wayland.o matches
+Binary file ./libweston/.libs/libweston_2_la-zoom.o matches
+Binary file ./libweston/.libs/libweston_2_la-compositor.o matches

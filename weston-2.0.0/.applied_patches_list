@@ -1,0 +1,3 @@
+/home/qe/px3-se/buildroot/package/weston/0001-os-compatibility-define-CLOCK_BOOTTIME-when-not-avai.patch
+/home/qe/px3-se/buildroot/package/weston/0002-clients-weston-info-print-unknown-formats-better.patch
+/home/qe/px3-se/buildroot/package/weston/0003-compositor-set-DEFAULT_REPAINT_WINDOW-15.patch
